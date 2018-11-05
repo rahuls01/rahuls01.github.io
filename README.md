@@ -9,7 +9,7 @@ You're going to need:
 ### Getting Set Up
 
 1. Fork this repository on GitHub.
-2. Clone *your forked repository* (not our original one) to your hard drive with `https://github.com/YOUR NAME/Webservices.git'
+2. Clone *your forked repository* (not our original one) to your hard drive with `https://github.com/YOURNAME/Webservices.git`
 3. `cd slate`
 4. Initialize and start Slate. You can either do this locally, or with Vagrant:
 
