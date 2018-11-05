@@ -1,4 +1,6 @@
-### Prerequisites
+#Documentation
+
+##How to install
 
 You're going to need:
 
@@ -23,3 +25,4 @@ vagrant up
 ```
 You can now see the docs at http://localhost:4567. 
 
+**Auditor: Rahul sharma**
