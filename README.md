@@ -1,6 +1,6 @@
-#Documentation
+# Documentation
 
-##How to install
+## How to install
 
 You're going to need:
 
