@@ -337,7 +337,7 @@
 Check the following languages  on the right  ------ >
 </aside>
 
-<p>The system is intended to access/retrieve the data in the distributie laag through web services. the
+<p>The system is intended to access/retrieve  data from the distributie laag through web services. the
 data is accessed through five web services (three HTTP JSON web services and two WFS
 web service):</p>
 
@@ -365,7 +365,7 @@ web service):</p>
 
 <p><strong>Metadata Service</strong> </p>
 
-<p>The Metadata Service has  one function:</p>
+<p>The Metadata Service has one function:</p>
 
 <table><thead>
 <tr>
@@ -377,8 +377,8 @@ web service):</p>
 </tr>
 </tbody></table>
 
-<p>A request for these service  will provide several lists of metadata from the
-distributie laag. On the basis of the data in these lists, you can fill the request for other services</p>
+<p>A request for this service will provide several lists of metadata from the
+distributie laag. On the basis of the data in these lists, you can fill the request for other services.</p>
 
 <p><strong>OnlineWaarnemingenServices</strong></p>
 
@@ -407,7 +407,7 @@ distributie laag. On the basis of the data in these lists, you can fill the requ
 
 <p><strong>BulkWaarnemingenService</strong></p>
 
-<p>The BulkWaarnemingenService consists of one function:</p>
+<p>The BulkWaarnemingenService has one function:</p>
 
 <table><thead>
 <tr>
@@ -424,7 +424,7 @@ a server that can be downloaded from a Rijkswaterstaat server at a later time.</
 
 <p><strong>Web Feature Service</strong></p>
 
-<p>The Web Feature Service has  two functions:</p>
+<p>The Web Feature Service has two functions:</p>
 
 <table><thead>
 <tr>
@@ -445,7 +445,7 @@ observation.</p>
 
 <p><strong>Web Mapping Service</strong></p>
 
-<p>The Web Mapping Service has 3 functions:</p>
+<p>The Web Mapping Service has three functions:</p>
 
 <table><thead>
 <tr>
@@ -463,9 +463,9 @@ observation.</p>
 </tr>
 </tbody></table>
 
-<p>The Mapping service responds to an xml with a description of the layers.
+<p>The Mapping service responds to an xml reqest with a description of the layers.
 The Getmap service provides an image of the specified area.
-The Getfeature provides the details of a feature per location as an answer.</p>
+The Getfeature provides the details of a feature per location as an response.</p>
 
 <p><strong>Dependence</strong></p>
 
@@ -678,7 +678,7 @@ If you are using the following code you will need all the imports. At the end th
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>To check if a location has information you need to send a new request to <strong>CheckWaarnemingAanwezig</strong>. The code will do it every location in a for loop.</p>
+<p>To check if a location has information you need to send a new request to <strong>CheckWaarnemingAanwezig</strong>. The code will do it for every location in a for loop.</p>
 
 <table><thead>
 <tr>
@@ -1118,8 +1118,7 @@ If you are using the following code you will need all the imports. At the end th
 <h1 id='metadataservice'>Metadataservice</h1>
 <p>The metadata services web service unlocks the distribution layer metadata. On the basis of the request, a
 response is build on the basis of the request that is send with the given parameters.
-It is important to note that the metadata is not a 1 to 1 copy of how the data is in the distribution layer
-saved. It is a collection of data based on the parameters in the request that is given to the service.</p>
+It is important to note that the metadata is not a 1 to 1 copy of how the data is saved in the distribution layer. It&#39;s a collection of data based on the parameters in the request that is requested to the service.</p>
 <h2 id='ophalencatalogus'>OphalenCatalogus</h2><pre class="highlight python tab-python"><code><span class="o">//</span> <span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="s2">"CatalogusFilter"</span><span class="p">:</span><span class="w">
     </span><span class="p">{</span><span class="w"> 
@@ -1683,7 +1682,7 @@ over a certain grouping period.</p>
 </tr>
 </tbody></table>
 <h1 id='bulkwaarnemingservice'>BulkWaarnemingService</h1>
-<p>The BulkWaarnemingenService Has one Function:</p>
+<p>The BulkWaarnemingenService has one function:</p>
 
 <table><thead>
 <tr>
@@ -1739,7 +1738,7 @@ over a certain grouping period.</p>
 of the other web services. This has to do with the fact that there is no information about the observations
 returned immediately. The request is actually parked in the distribution web services database
 after which this data is collected at a later date. This data is based on
-various settings are collected after which a compressed file is generated. When this is
+various settings that are collected after which a compressed file is generated. When this
 file is created the applicant is informed that it can be downloaded from a remote location.
 A valid e-mail address must be provided for this purpose. A valid e-mail address meets the
 next regular expression (within quotes):</p>
@@ -2045,57 +2044,22 @@ You can use newer or older versions of the modules but this is not tested in the
 <h1 id='errors'>Errors</h1>
 <p>The Webservices uses the following error codes:</p>
 
-<table><thead>
-<tr>
-<th>Error Code</th>
-<th>Meaning</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
-</tr>
-</tbody></table>
+<p>COMING SOON !</p>
+
+<!-- 
+Error Code | Meaning
+---------- | -------
+400 | Bad Request -- Your request is invalid.
+401 | Unauthorized -- Your API key is wrong.
+403 | Forbidden -- The kitten requested is hidden for administrators only.
+404 | Not Found -- The specified kitten could not be found.
+405 | Method Not Allowed -- You tried to access a kitten with an invalid method.
+406 | Not Acceptable -- You requested a format that isn't json.
+410 | Gone -- The kitten requested has been removed from our servers.
+418 | I'm a teapot.
+429 | Too Many Requests -- You're requesting too many kittens! Slow down!
+500 | Internal Server Error -- We had a problem with our server. Try again later.
+503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later. -->
 
       </div>
       <div class="dark-box">
