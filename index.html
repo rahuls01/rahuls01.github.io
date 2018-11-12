@@ -1556,6 +1556,10 @@ specified Aquometadata, Locaties and Waarnemingen parameters.</p>
 <td>This will show the locations with and without data.</td>
 </tr>
 </tbody></table>
+
+<aside class="notice">
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
+</aside>
 <h2 id='checkwaarnemingenaanwezig'>CheckWaarnemingenAanwezig</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoMetadataLijst"</span><span class="w"> </span><span class="p">:</span><span class="w">
     </span><span class="p">[{</span><span class="w">
@@ -1624,6 +1628,10 @@ certain period that meet the specified Aquometadata, Locaties and Waarnemingen p
 <td>This will show the locations with and without data.</td>
 </tr>
 </tbody></table>
+
+<aside class="notice">
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
+</aside>
 <h2 id='ophalenaantalwaarnemingen'>OphalenAantalWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">Check</span> <span class="n">JSON</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoMetadataLijst"</span><span class="w"> </span><span class="p">:</span><span class="w">
     </span><span class="p">[{</span><span class="w">
@@ -1711,6 +1719,10 @@ over a certain grouping period.</p>
 <td>This will show the locations with and without data.</td>
 </tr>
 </tbody></table>
+
+<aside class="notice">
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
+</aside>
 <h1 id='bulkwaarnemingservice'>BulkWaarnemingService</h1>
 <p>The BulkWaarnemingenService has one function:</p>
 
@@ -1813,13 +1825,17 @@ next regular expression (within quotes):</p>
 </tr>
 <tr>
 <td>LocatieLijst</td>
-<td>Vul dit later aan</td>
-<td>vul dit later aan</td>
+<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
+<td>This will show the locations with and without data.</td>
 </tr>
 </tbody></table>
 
-<aside class="notice">
+<aside class="warning">
 These values used in the request and response are not real and should not be used any requests or testing. 
+</aside>
+
+<aside class="notice">
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
 </aside>
 <h1 id='webfeatureservices'>WebFeatureServices</h1>
 <p>There are two available WFS features for the distribution layer:</p>
