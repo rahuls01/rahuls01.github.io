@@ -471,7 +471,37 @@ The Getfeature provides the details of a feature per location as an response.</p
 
 <p>The web services depend on the distributie laag. When the distributie laag is not functioning properly,
 this has an influence on the functioning of the web services. Requests within all web services and the Web Feature Service
-make use of the Locatie, aquometadata and observations in the distributie laag.</p>
+make use of the Locatie, Aquometadata and Waarnemingen in the distributie laag.</p>
+
+<p><strong>Dates</strong></p>
+
+<p>If you are using dates in the request statements within the services you need to keep the following format:</p>
+
+<table><thead>
+<tr>
+<th>Year</th>
+<th>Month</th>
+<th>Day</th>
+<th>Separator</th>
+<th>Hours</th>
+<th>Minutes</th>
+<th>Seconds</th>
+<th>Time zone</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0000</td>
+<td>00</td>
+<td>00</td>
+<td>T</td>
+<td>00</td>
+<td>00</td>
+<td>00</td>
+<td>000</td>
+</tr>
+</tbody></table>
+
+<p>0000-00-00T00:00:00.000+01:00</p>
 <h1 id='tutorial-locations'>Tutorial Locations</h1><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">Python</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>//Nothing to show check Python
