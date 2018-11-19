@@ -377,10 +377,8 @@ webservice):</p>
 </tr>
 </tbody></table>
 
-<p>een Request naar deze service zal een lijst met metadat geven van alle andere webservices in de distributielaag.
-A request for this service will provide several lists of metadata from the
-distributie laag. Op basis van de gegevens in deze lijsten kan men requesten formulieren voor één van de vier
-OnlineWaarnemingenServices.</p>
+<p>Een Request naar deze service zal een lijst met metadat geven van alle andere webservices in de distributielaag.
+Op basis van de gegevens in deze lijsten kan men requesten formulieren voor één van de vier OnlineWaarnemingenServices.</p>
 
 <p><strong>OnlineWaarnemingenServices</strong></p>
 
@@ -407,9 +405,7 @@ OnlineWaarnemingenServices.</p>
 
 <p>Met een request naar de <strong>OphalenWaarnemingen service</strong> is het mogelijk waarnemingen op te halen die
 voldoen aan de opgegeven parameters. Deze parameters hebben betrekking tot de Aquometadata, Locatie
-en Periode waarin de waarnemingen zijn uitgevoerd. Een request naar de <strong>OphalenLaatsteWaarnemingen service</strong> haalt van de betreffende aquometadata de laatste waarneming die voldoet aan de meegegeven
-parameters. De service <strong>OphalenAantalWaarnemingen</strong> haalt het aantal waarnemingen op gegroepeerd per
-opgegeven groeperingperiode. De service <strong>CheckWaarnemingenAanwezig</strong> retourneert of er waarnemingen in
+en Periode waarin de waarnemingen zijn uitgevoerd. Een request naar de <strong>OphalenLaatsteWaarnemingen service</strong> haalt van de betreffende aquometadata de laatste waarneming die voldoet aan de meegegeven parameters. De service <strong>OphalenAantalWaarnemingen</strong> haalt het aantal waarnemingen op gegroepeerd per opgegeven groeperingperiode. De service <strong>CheckWaarnemingenAanwezig</strong> retourneert of er waarnemingen in
 de distributielaag aanwezig zijn die voldoen aan de meegegeven parameters.</p>
 
 <p><strong>BulkWaarnemingenService</strong></p>
@@ -503,7 +499,7 @@ waarnemingen opvragen.</p>
 </tr>
 </tbody></table>
 
-<p>Voor meer informatie over het format <a href = "https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations">ISO 8601</a>i</p>
+<p>Voor meer informatie over het format <a href = "https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations">ISO 8601</a></p>
 <h1 id='tutorial-locations'>Tutorial Locations</h1><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">Python</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>//Nothing to show check Python
@@ -518,11 +514,11 @@ waarnemingen opvragen.</p>
 </thead><tbody>
 <tr>
 <td>true.csv</td>
-<td>This will contain all locations with the value true(there is information)</td>
+<td>Dit CSV-bestand alle locaties waar de waarde True is (Er is informatie)</td>
 </tr>
 <tr>
 <td>false.csv</td>
-<td>This will contain all locations with the value false(there is no information)</td>
+<td>Dit CSV-bestand alle locaties waar de waarde False is (Er is geen informatie)</td>
 </tr>
 </tbody></table>
 <h2 id='import'>Import</h2><pre class="highlight python tab-python"><code><span class="c">#within python you use the following imports</span>
@@ -539,11 +535,12 @@ waarnemingen opvragen.</p>
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Dit zijn de Imports die nodig zijn om de juiste waardes in het juiste format uit de metadataservice te krijgen python
-The following imports are needed to get values from the webservice Metadataservice in python.
+<p>Dit zijn de Modules die nodig zijn om de juiste waardes in het juiste format uit de metadataservice te krijgen python
+The following Modules are needed to get values from the webservice Metadataservice in python.</p>
+
 <aside class="notice">
-Mocht er gebruik worden gemaakt van deze code zijn al deze imports nodig. Aan het einde van de documentatie is er een versionlist met daarin alle versies die gebruikt zijn tijdens het ontwikkelen van het script.
-</aside></p>
+Mocht er gebruik worden gemaakt van deze code zijn al deze Modules nodig. Aan het einde van de documentatie is er een versionlist met daarin alle versies die gebruikt zijn tijdens het ontwikkelen van het script.
+</aside>
 <h2 id='webservices'>Webservices</h2><pre class="highlight python tab-python"><code><span class="c">#the webservices</span>
 <span class="n">collect_catalogus</span> <span class="o">=</span> <span class="p">(</span><span class="s">'https://waterwebservices.rijkswaterstaat.nl/'</span> <span class="o">+</span>
                      <span class="s">'METADATASERVICES_DBO/'</span> <span class="o">+</span>
@@ -614,11 +611,6 @@ Mocht er gebruik worden gemaakt van deze code zijn al deze imports nodig. Aan he
 <td>Compartimenten</td>
 <td>true/false</td>
 <td>Dit zal de lijst tonen met  Compartimenten.</td>
-</tr>
-<tr>
-<td>Parameters</td>
-<td>true/false</td>
-<td>Dit zal de lijst tonen met  Parameters.</td>
 </tr>
 </tbody></table>
 
@@ -843,92 +835,92 @@ Het is mogelijk om de namen van de CSV-files te veranderen.
 </thead><tbody>
 <tr>
 <td>Grootheden</td>
-<td>Deze lijst Groothedenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Grootheden kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Parameters</td>
-<td>Deze lijst Parameterskan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Parameters kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
-<td>Deze lijst Compartimentenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Compartimenten kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Hoedanigheden</td>
-<td>Deze lijst Hoedanighedenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Hoedanigheden kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td>Deze lijst Eenhedenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Eenheden kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>BemonsteringsApparaten</td>
-<td>Deze lijst BemonsteringsApparatenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst BemonsteringsApparaten kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>BemonsteringsMethoden</td>
-<td>Deze lijst BemonsteringsMethodenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst BemonsteringsMethoden kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>BemonsteringsSoorten</td>
-<td>Deze lijst BemonsteringsSoortenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst BemonsteringsSoorten kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>BioTaxon</td>
-<td>Deze lijst BioTaxonkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst BioTaxon kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>BioTaxon_Compartimenten</td>
-<td>Deze lijst BioTaxon_Compartimentenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst BioTaxon_Compartimenten kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>MeetApparaten</td>
-<td>Deze lijst MeetApparatenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst MeetApparaten kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>MonsterBewerkingsMethoden</td>
-<td>Deze lijst MonsterBewerkingsMethodenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst MonsterBewerkingsMethoden kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Organen</td>
-<td>Deze lijst Organenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Organen kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>PlaatsBepalingsApparaten</td>
-<td>Deze lijst PlaatsBepalingsApparatenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst PlaatsBepalingsApparaten kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Typeringen</td>
-<td>Deze lijst Typeringenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Typeringen kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>WaardeBepalingstechnieken</td>
-<td>Deze lijst WaardeBepalingstechniekenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst WaardeBepalingstechnieken kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>WaardeBepalingsmethoden</td>
-<td>Deze lijst WaardeBepalingsmethodenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst WaardeBepalingsmethoden kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>WaardeBewerkingsmethoden</td>
-<td>Deze lijst WaardeBewerkingsmethodenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst WaardeBewerkingsmethoden kan worden gebruikt binnen de webservices</td>
 <td>True/False</td>
 </tr>
 </tbody></table>
@@ -976,7 +968,7 @@ Als er gebruikt wordt gemaakt van dit script moet je gebruik maken van alle impo
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Dit Request is nodig om te sturen naar de webservice.</p>
+<p>Dit request is nodig om te sturen naar de webservice.</p>
 <h2 id='response'>Response</h2><pre class="highlight python tab-python"><code><span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">collect_catalogus</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
@@ -1078,43 +1070,43 @@ Als er gebruikt wordt gemaakt van dit script moet je gebruik maken van alle impo
 </thead><tbody>
 <tr>
 <td>Grootheden</td>
-<td>Deze lijst Groothedenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Grootheden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Parameters</td>
-<td>Deze lijst Parameterskan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Parameters kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
-<td>Deze lijst Compartimentenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Compartimenten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Hoedanigheden</td>
-<td>Deze lijst Hoedanighedenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Hoedanigheden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td>Deze lijst Eenhedenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst Eenheden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsApparaten</td>
-<td>Deze lijst BemonsteringsApparatenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst BemonsteringsApparaten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsMethoden</td>
-<td>Deze lijst BemonsteringsMethodenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst BemonsteringsMethoden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsSoorten</td>
-<td>Deze lijst BemonsteringsSoortenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst BemonsteringsSoorten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>BioTaxon</td>
-<td>Deze lijst BioTaxonkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst BioTaxon kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>BioTaxon_Compartimenten</td>
-<td>Deze lijst BioTaxon_Compartimentenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst BioTaxon_Compartimenten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>MeetApparaten</td>
@@ -1122,7 +1114,7 @@ Als er gebruikt wordt gemaakt van dit script moet je gebruik maken van alle impo
 </tr>
 <tr>
 <td>MonsterBewerkingsMethoden</td>
-<td>Deze lijst MonsterBewerkingsMethodenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst MonsterBewerkingsMethoden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Organen</td>
@@ -1130,7 +1122,7 @@ Als er gebruikt wordt gemaakt van dit script moet je gebruik maken van alle impo
 </tr>
 <tr>
 <td>PlaatsBepalingsApparaten</td>
-<td>Deze lijst PlaatsBepalingsApparatenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst PlaatsBepalingsApparaten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Typeringen</td>
@@ -1138,15 +1130,15 @@ Als er gebruikt wordt gemaakt van dit script moet je gebruik maken van alle impo
 </tr>
 <tr>
 <td>WaardeBepalingstechnieken</td>
-<td>Deze lijst WaardeBepalingstechniekenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst WaardeBepalingstechnieken kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>WaardeBepalingsmethoden</td>
-<td>Deze lijst WaardeBepalingsmethodenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst WaardeBepalingsmethoden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>WaardeBewerkingsmethoden</td>
-<td>Deze lijst WaardeBewerkingsmethodenkan worden gebruikt binnen de webservices</td>
+<td>Deze lijst WaardeBewerkingsmethoden kan worden gebruikt binnen de webservices</td>
 </tr>
 </tbody></table>
 <h1 id='metadataservice'>Metadataservice</h1>
@@ -1221,92 +1213,92 @@ zoekcriteria.</p>
 </thead><tbody>
 <tr>
 <td>Grootheden</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst Grootheden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Parameters</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst Parameters kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst Compartimenten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Hoedanigheden</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst Hoedanigheden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst Eenheden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsApparaten</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst BemonsteringsApparaten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsMethoden</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst BemonsteringsMethoden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsSoorten</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst BemonsteringsSoorten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>BioTaxon</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst BioTaxon kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>BioTaxon_Compartimenten</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst BioTaxon_Compartimenten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>MeetApparaten</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst MeetApparaten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>MonsterBewerkingsMethoden</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst MonsterBewerkingsMethoden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Organen</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst Organen kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>PlaatsBepalingsApparaten</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst PlaatsBepalingsApparaten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Typeringen</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst Typeringen kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>WaardeBepalingstechnieken</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst WaardeBepalingstechnieken kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>WaardeBepalingsmethoden</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst WaardeBepalingsmethoden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>WaardeBewerkingsmethoden</td>
-<td><a href='/?python#tutorial-values'>make your own lijst using Tutorial Values </a></td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
 <td>Deze lijst WaardeBewerkingsmethoden kan worden gebruikt binnen de webservices</td>
 </tr>
 </tbody></table>
@@ -1805,23 +1797,23 @@ with the Attribute LocatieLijst it's possible to give multiple locations within 
 </thead><tbody>
 <tr>
 <td>Grootheden</td>
-<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
-<td>This list Grootheden that can be used in the webservices</td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst via Tutorial Values </a></td>
+<td>Deze lijst Grootheden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
-<td>This list Eenheden that can be used in the webservices</td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst via Tutorial Values </a></td>
+<td>Deze lijst Eenheden kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
-<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
-<td>This list Compartimenten that can be used in the webservices</td>
+<td><a href='/?python#tutorial-values'>Maak je eigen lijst via Tutorial Values </a></td>
+<td>Deze lijst Compartimenten kan worden gebruikt binnen de webservices</td>
 </tr>
 <tr>
 <td>LocatieLijst</td>
-<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
-<td>This will show the locations with and without data.</td>
+<td><a href='/?python#tutorial-locations'>Maak je eigen lijst met  Tutorial locations </a></td>
+<td>Deze lijst zal Locaties tonen.</td>
 </tr>
 </tbody></table>
 
