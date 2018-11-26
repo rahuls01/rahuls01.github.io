@@ -378,11 +378,11 @@ webservice):</p>
 </tbody></table>
 
 <p>Een request naar deze service zal een lijst met metadata geven van alle andere webservices in de distributielaag.
-Op basis van de gegevens in deze lijsten kan men requesten formulieren voor één van de vier OnlineWaarnemingenServices.</p>
+Op basis van de gegevens in deze lijsten kan men requesten formulieren voor één van de vier functies van de OnlineWaarnemingenService.</p>
 
-<p><strong>OnlineWaarnemingenServices</strong></p>
+<p><strong>OnlineWaarnemingenService</strong></p>
 
-<p>The OnlineWaarnemingenServices heeft vier functies:</p>
+<p>The OnlineWaarnemingenService heeft vier functies:</p>
 
 <table><thead>
 <tr>
@@ -504,7 +504,7 @@ waarnemingen opvragen.</p>
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>//Nothing to show check Python
 </code></pre>
-<p>Het volgende script laat zien (stap voor stap ) hoe er een lijst met locaties moet worden opgehaald uit de Metadataservice. Als de code 1 op 1 word overgenomen komen er 2 CSV-files uit.</p>
+<p>Het volgende script laat zien (stap voor stap) hoe er een lijst met locaties moet worden opgehaald uit de Metadataservice. Als de code 1 op 1 word overgenomen komen er 2 CSV-files uit.</p>
 
 <table><thead>
 <tr>
@@ -514,11 +514,11 @@ waarnemingen opvragen.</p>
 </thead><tbody>
 <tr>
 <td>true.csv</td>
-<td>Dit CSV-bestand alle locaties waar de waarde True is (Er is informatie)</td>
+<td>Dit CSV-bestand  bevat alle locaties waar de waarde True is (Er is informatie)</td>
 </tr>
 <tr>
 <td>false.csv</td>
-<td>Dit CSV-bestand alle locaties waar de waarde False is (Er is geen informatie)</td>
+<td>Dit CSV-bestand bevat alle locaties waar de waarde False is (Er is geen informatie)</td>
 </tr>
 </tbody></table>
 <h2 id='import'>Import</h2><pre class="highlight python tab-python"><code><span class="c">#within python you use the following imports</span>
@@ -535,10 +535,10 @@ waarnemingen opvragen.</p>
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Dit zijn de Modules die nodig zijn om de juiste waardes in het juiste format uit de metadataservice te krijgen python</p>
+<p>Dit zijn de &quot;Modules&quot; die nodig zijn om de juiste waardes in het juiste format uit de metadataservice te krijgen python</p>
 
 <aside class="notice">
-Mocht er gebruik worden gemaakt van deze code zijn al deze Modules nodig. Aan het einde van de documentatie is er een versionlist met daarin alle versies die gebruikt zijn tijdens het ontwikkelen van het script.
+Mocht er gebruik worden gemaakt van deze code zijn al deze "Modules" nodig. Aan het einde van de documentatie is er een versie lijst met daarin alle modules met versies die gebruikt zijn tijdens het ontwikkelen van het script.
 </aside>
 <h2 id='webservices'>Webservices</h2><pre class="highlight python tab-python"><code><span class="c">#the webservices</span>
 <span class="n">collect_catalogus</span> <span class="o">=</span> <span class="p">(</span><span class="s">'https://waterwebservices.rijkswaterstaat.nl/'</span> <span class="o">+</span>
@@ -582,7 +582,7 @@ Mocht er gebruik worden gemaakt van deze code zijn al deze Modules nodig. Aan he
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Dit is het request die gebruikt zijn in de code.</p>
+<p>Dit zijn de parameters die gebruikt zijn binnen de aanvraag</p>
 
 <table><thead>
 <tr>
@@ -613,7 +613,7 @@ Mocht er gebruik worden gemaakt van deze code zijn al deze Modules nodig. Aan he
 </tr>
 </tbody></table>
 
-<aside class="warning">Als er gebruik word gemaakt van deze python code moet je de waardes allemaal op TRUE zetten.</aside>
+<aside class="warning">Als er gebruik word gemaakt van deze python code moet je de waardes allemaal op TRUE zetten. zoals bij het voorbeeld getoond</aside>
 <h2 id='start-end-date'>Start/End date</h2><pre class="highlight python tab-python"><code><span class="n">huidige_datum</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
 <span class="c">#einddatum word nu de huidige tijd en datum ingevoerd. </span>
@@ -754,7 +754,7 @@ Mocht er gebruik worden gemaakt van deze code zijn al deze Modules nodig. Aan he
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Binnen de for loop moet er gecheckt worden of er waardes zijn de response en de locatie zal daarna naar de juiste dataframe worden gestuurd.</p>
+<p>Binnen de for loop moet er gecheckt worden of er waardes zijn. De response en de locatie zal daarna naar de juiste dataframe worden gestuurd.</p>
 
 <table><thead>
 <tr>
@@ -932,7 +932,7 @@ Het is mogelijk om de namen van de CSV-files te veranderen.
 <p>De volgende imports zijn nodig om de juiste waardes terug te krijgen uit de webservice MetadataService binnen python en deze tutorial.</p>
 
 <aside class="notice">
-Als er gebruikt wordt gemaakt van dit script moet je gebruik maken van alle imports. Aan het einde van de documentatie zal er een lijst zijn met alle versies die gebruikt zijn tijdens het ontwikkelen van het script.
+Als er gebruikt wordt gemaakt van dit script moet er gebruik worden gemaakt van alle imports. Aan het einde van de documentatie zal er een lijst zijn met alle module versies die gebruikt zijn tijdens het ontwikkelen van het script.
 
 </aside>
 <h2 id='request'>Request</h2><pre class="highlight python tab-python"><code>
@@ -1302,7 +1302,7 @@ zoekcriteria.</p>
 </tr>
 </tbody></table>
 <h1 id='onlinewaarnemingenservice'>OnlineWaarnemingenservice</h1>
-<p>De Onlinewaarnemingen ontsluit de distributie laag waarnemingen. Gebaseerd op het request kunnen deze waarnemingen en de daarbij behoordende informatie worden verzameld en terug gestuurd naar de eindgebruiker.</p>
+<p>De Onlinewaarnemingen ontsluit de distributie laag waarnemingen. Gebaseerd op het request kunnen deze waarnemingen en de daarbij behorende informatie worden verzameld en terug gestuurd naar de eindgebruiker.</p>
 
 <table><thead>
 <tr>
@@ -1624,7 +1624,7 @@ Waanneer er geen waardes zijn.
 </tbody></table>
 
 <aside class="notice">
-Met de parameter LocatieLijst kunnen er meerdere locaties worden meegegeven binnen 1 request.
+Met de parameter LocatieLijst kunnen er meerdere locaties worden meegegeven binnen èèn request.
 
 </aside>
 <h2 id='ophalenaantalwaarnemingen'>OphalenAantalWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">Check</span> <span class="n">JSON</span>
@@ -1664,10 +1664,10 @@ Met de parameter LocatieLijst kunnen er meerdere locaties worden meegegeven binn
         <span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:VALUE,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"X"</span>:VALUE,<span class="s2">"Y"</span>:VALUE,<span class="s2">"Naam"</span>:<span class="s2">" VALUE"</span>,<span class="s2">"Code"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
         <span class="s2">"AantalMetingenPerPeriodeLijst"</span>:[<span class="o">{</span><span class="s2">"Groeperingsperiode"</span>:<span class="o">{</span><span class="s2">"Jaarnummer"</span>:VALUE,<span class="s2">"Week"</span>:VALUE<span class="o">}</span>,<span class="s2">"AantalMetingen"</span>:VALUE<span class="o">}]}</span>,
 </code></pre>
-<p>Het volgende request is een voorbeeld voor het ophalen van een aantal waarnemingen met een specifieke periode rekening houdend met de volgende parameters Aqoumetadata, Locaties, Waarnemingen. Gegroepeerd op een bepaalde periode.</p>
+<p>Het volgende request is een voorbeeld voor het ophalen van een aantal waarnemingen met een specifieke periode rekening houdend met de volgende parameters Aqoumetadata, Locaties, Waarnemingen. dit wordt vervolgens gegroepeerd op een bepaalde periode.</p>
 
 <aside class="notice">
-Deze server werkt nog niet optimaal en er zijn problemen bekent.
+Deze server werkt nog niet optimaal en er zijn problemen bekend.
 </aside>
 
 <table><thead>
@@ -1708,13 +1708,13 @@ Deze server werkt nog niet optimaal en er zijn problemen bekent.
 </tr>
 <tr>
 <td>LocatieLijst</td>
-<td><a href='/?python#tutorial-locations'>De lijst vanuit Tutorial locations </a></td>
+<td><a href='/?python#tutorial-locations'>De lijst vanuit tutorial locations </a></td>
 <td>Dit zal de lijst tonen met locations met en zonder data.</td>
 </tr>
 </tbody></table>
 
 <aside class="notice">
-Met Locatielijst wordt het mogelijk om meerdere locaties meetegeven in 1 request.
+Met Locatielijst wordt het mogelijk om meerdere locaties mee te geven in èèn request.
 
 </aside>
 <h1 id='bulkwaarnemingservice'>BulkWaarnemingService</h1>
@@ -1770,7 +1770,7 @@ Met Locatielijst wordt het mogelijk om meerdere locaties meetegeven in 1 request
             <span class="s2">"aanvrager@rws.nl"</span>, <span class="s2">"Subject"</span> : <span class="s2">"Bevestiging vanaanvraag"</span>,<span class="s2">"Body"</span>:<span class="s2">"Uw aanvraag is ontvangen. U ontvangt binnen 24 uur een e-mail met daarin een link voor het downloaden van de aanvraag."</span><span class="o">}</span>,
         <span class="s2">"Succesvol"</span>:true<span class="o">}</span>
 </code></pre>
-<p>Aan de rechterkant bij JSON Request is een voorbeeld te zien van een request naar Bulkwaarnemingen. Deze service is anders als de andere services. Dit heeft te maken met het feit dat er geen directe informatie terug gestuurd word naar de eindgebruiker. Het request word geparkeerd in de distributie webservices database waarna het na kan worden opgehaald op een later tijdstip. Deze data is gebouwd op verschillende variabelen die later opgehaald kunnen worden in een gecompressed file. Zodra deze file is aangemaakt krijgt de eindgebruiker via de mail een bericht en kan het worden gedownload van 1 van de rijkswaterstaat databases. Belangrijk is een valide e-mail address om er voor te zorgen dat de eingebruiker het bericht krijgt. Met de requliere expressies kan een e-mail adress gecheckt worden:</p>
+<p>Aan de rechterkant bij JSON Request is een voorbeeld te zien van een request naar Bulkwaarnemingen. Deze service is anders als de andere services. Dit heeft te maken met het feit dat er geen directe informatie terug gestuurd word naar de eindgebruiker. Het request word geparkeerd in de distributie webservices database waarna het  kan worden opgehaald op een later tijdstip. Deze data is gebouwd op verschillende variabelen die later opgehaald kunnen worden in een gecompressed file. Zodra deze file is aangemaakt krijgt de eindgebruiker via de mail een bericht en kan het worden gedownload van èèn van de rijkswaterstaat databases. Belangrijk is een valide e-mail adres om er voor te zorgen dat de eindgebruiker het bericht krijgt. Met de requliere expressies kan een e-mail adres gecheckt worden:</p>
 
 <p><strong>&quot;^ [a-zA-Z0-9 .<em>% -] + @ [a-zA-Z0-9 .</em>% -] + . [a-zA-Z] {2 , 4} $ &quot;.</strong> </p>
 
@@ -1823,7 +1823,7 @@ De waardes die gebruikt worden bij het voorbeeld zijn niet echt en zouden NOOIT 
 </aside>
 
 <aside class="notice">
-Met de Attribute Locatielijst is het mogelijk om meerdere locaties meetegeven in 1 request.
+Met de parameter Locatielijst is het mogelijk om meerdere locaties mee te geven in 1 request.
 </aside>
 <h1 id='webfeatureservices'>WebFeatureServices</h1>
 <p>Er zijn 2 verschillende WFS functies in de distributie laag:</p>
@@ -1907,7 +1907,7 @@ Met de Attribute Locatielijst is het mogelijk om meerdere locaties meetegeven in
     &lt;/gml:featureMember&gt;
     &lt;/wfs:FeatureCollection&gt;
 </code></pre>
-<p>Rechts is er een voorbeeld request getoond voor het ophalen van Locaties WFS. In de message body binnen het POST request kun je een filter toevoegen voor het gewenste resultaat.</p>
+<p>Rechts is er een voorbeeld request voor het ophalen van Locaties WFS. In de message body binnen het POST request kun je een filter toevoegen voor het gewenste resultaat.</p>
 
 <table><thead>
 <tr>
@@ -1995,8 +1995,7 @@ Met de Attribute Locatielijst is het mogelijk om meerdere locaties meetegeven in
     &lt;/gml:featureMember&gt;
     &lt;/wfs:FeatureCollection&gt;
 </code></pre>
-<p>Het volgende request is een voorbeeld voor het ophalen van locaties met de locatieMetLaatste Waarneming WFS. 
-The following is a sample request for calling the Locations with the LocatiesMetLaatsteWaarneming WFS. In de message body binnen het POST request kun je een filter toevoegen voor het gewenste resultaat.</p>
+<p>Het volgende request is een voorbeeld voor het ophalen van locaties met de locatie Met Laatste Waarneming WFS. In de message body binnen het POST request kun je een filter toevoegen voor het gewenste resultaat.</p>
 
 <table><thead>
 <tr>
