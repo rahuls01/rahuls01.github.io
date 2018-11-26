@@ -221,7 +221,7 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#introductie" class="toc-h1 toc-link" data-title="Introductie">Introductie</a>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
             <a href="#tutorial-locations" class="toc-h1 toc-link" data-title="Tutorial Locations">Tutorial Locations</a>
@@ -311,7 +311,7 @@
               </ul>
           </li>
           <li>
-            <a href="#versie" class="toc-h1 toc-link" data-title="Versie">Versie</a>
+            <a href="#version" class="toc-h1 toc-link" data-title="Version">Version</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#python" class="toc-h2 toc-link" data-title="Python">Python</a>
@@ -319,7 +319,7 @@
               </ul>
           </li>
           <li>
-            <a href="#foutmeldingen" class="toc-h1 toc-link" data-title="Foutmeldingen">Foutmeldingen</a>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
         <ul class="toc-footer">
@@ -329,17 +329,17 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introductie'>Introductie</h1><pre class="highlight python tab-python"><code><span class="o">//</span> <span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span>
+        <h1 id='introduction'>Introduction</h1><pre class="highlight python tab-python"><code><span class="o">//</span> <span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show
 </code></pre>
 <aside class="notice">
-Check de verschillende talen rechts  ------ >
+Check the following languages  on the right  ------ >
 </aside>
 
-<p>Het systeem is bedoeld om via webservices de data in de distributielaag te ontsluiten/op te vragen. De
-gegevens worden ontsloten via een vijftal webservices (drie HTTP JSON webservices en twee WFS
-webservice):</p>
+<p>The system is intended to access/retrieve  data from the distributie laag through web services. the
+data is accessed through five web services (three HTTP JSON web services and two WFS
+web service):</p>
 
 <table><thead>
 <tr>
@@ -365,11 +365,11 @@ webservice):</p>
 
 <p><strong>Metadata Service</strong> </p>
 
-<p>The Metadata Service heeft èèn functie:</p>
+<p>The Metadata Service has one function:</p>
 
 <table><thead>
 <tr>
-<th>Functie</th>
+<th>Function</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -377,16 +377,16 @@ webservice):</p>
 </tr>
 </tbody></table>
 
-<p>Een request naar deze service zal een lijst met metadata geven van alle andere webservices in de distributielaag.
-Op basis van de gegevens in deze lijsten kan men requesten formulieren voor één van de vier functies van de OnlineWaarnemingenService.</p>
+<p>A request for this service will provide several lists of metadata from the
+distributie laag. On the basis of the data in these lists, you can fill the request for other services.</p>
 
-<p><strong>OnlineWaarnemingenService</strong></p>
+<p><strong>OnlineWaarnemingenServices</strong></p>
 
-<p>The OnlineWaarnemingenService heeft vier functies:</p>
+<p>The OnlineWaarnemingenServices has four functions:</p>
 
 <table><thead>
 <tr>
-<th>Functie</th>
+<th>Function</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -403,18 +403,15 @@ Op basis van de gegevens in deze lijsten kan men requesten formulieren voor éé
 </tr>
 </tbody></table>
 
-<p>Met een request naar de <strong>OphalenWaarnemingen service</strong> is het mogelijk waarnemingen op te halen die
-voldoen aan de opgegeven parameters. Deze parameters hebben betrekking tot de Aquometadata, Locatie
-en Periode waarin de waarnemingen zijn uitgevoerd. Een request naar de <strong>OphalenLaatsteWaarnemingen service</strong> haalt van de betreffende aquometadata de laatste waarneming die voldoet aan de meegegeven parameters. De service <strong>OphalenAantalWaarnemingen</strong> haalt het aantal waarnemingen op gegroepeerd per opgegeven groeperingperiode. De service <strong>CheckWaarnemingenAanwezig</strong> retourneert of er waarnemingen in
-de distributielaag aanwezig zijn die voldoen aan de meegegeven parameters.</p>
+<p>With a request to the  <strong>Ophalenwaarnemingen service</strong> it&#39;s possible to get all observations with the right parameters. These parameters need to relate to <strong>Aquometadata</strong>, <strong>Locatie</strong> and <strong>Periode</strong> where de observations are done. A request to the <strong>OphalenLaasteWaarnemingenService</strong> will return the last obervation. The service <strong>OphalenLaatsteWaarnemingen</strong> returns observations per grouped specified grouping on period. The <strong>CheckWaarnemingenAanwezigService</strong> returns the observations from the distributie laag wich are those that comply with the parameters provided.</p>
 
 <p><strong>BulkWaarnemingenService</strong></p>
 
-<p>The BulkWaarnemingenService heeft 1 functie:</p>
+<p>The BulkWaarnemingenService has one function:</p>
 
 <table><thead>
 <tr>
-<th>Functie</th>
+<th>Function</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -422,15 +419,16 @@ de distributielaag aanwezig zijn die voldoen aan de meegegeven parameters.</p>
 </tr>
 </tbody></table>
 
-<p>Met de <strong>AanvragenBulkWaarnemingen</strong> service kan er een bulk worden aangemaakt die op een later tijdstip kan worden gedownload van een Rijkswaterstaat server.</p>
+<p>With the <strong>AanvragenBulkWaarnemingen</strong> service an application can be made to a
+a server that can be downloaded from a Rijkswaterstaat server at a later time.</p>
 
 <p><strong>Web Feature Service</strong></p>
 
-<p>The Web Feature Service heeft twee functies:</p>
+<p>The Web Feature Service has two functions:</p>
 
 <table><thead>
 <tr>
-<th>Functie</th>
+<th>Function</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -441,17 +439,17 @@ de distributielaag aanwezig zijn die voldoen aan de meegegeven parameters.</p>
 </tr>
 </tbody></table>
 
-<p>Met de Mapserver wordt de geometrie binnen de distributielaag beschikbaar gesteld door middel van Web
-Feature Service. Via de Web Feature Service kan men de locaties en locaties in combinatie met de laatste
-waarnemingen opvragen.</p>
+<p>With the Mapserver, the geometry within the distributie laag is made available through Web
+Feature Service. Through the <strong>Web Feature Service</strong> you can find the locaties and locaties in combination with the last 
+observation.</p>
 
 <p><strong>Web Mapping Service</strong></p>
 
-<p>The Web Mapping Service heeft drie functies:</p>
+<p>The Web Mapping Service has three functions:</p>
 
 <table><thead>
 <tr>
-<th>Functie</th>
+<th>Function</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -465,26 +463,30 @@ waarnemingen opvragen.</p>
 </tr>
 </tbody></table>
 
-<p>De Mapping service levert als response een xml met een beschrijving van de lagen. De Getmap service levert een afbeelding van het opgegeven gebied. De Getfeature levert als antwoord de gegevens van een feature per locatie.</p>
+<p>The Mapping service responds to an xml request with a description of the layers.
+The Getmap service provides an image of the specified area.
+The Getfeature provides the details of a feature per location as an response.</p>
 
-<p><strong>Afhankelijkheid</strong></p>
+<p><strong>Dependence</strong></p>
 
-<p>De Services zijn afhankelijk van de distributie laag. Wanneer de distributie laag niet goed werkt, zal dit invloed kunnen hebben op de services. Alle Requests binnen de webservices en de WFS maken gebruik van Locatie, Aquometadata en Waarnemingen in de distributie laag.</p>
+<p>The web services depend on the distributie laag. When the distributie laag is not functioning properly,
+this has an influence on the functioning of the web services. Requests within all web services and the Web Feature Service
+make use of the Locatie, Aquometadata and Waarnemingen in the distributie laag.</p>
 
-<p><strong>Datum</strong></p>
+<p><strong>Dates</strong></p>
 
-<p>Als er gebruik wordt gemaakt van datums in request statements binnen de services moet er gebruik worden gemaakt van het volgende format:</p>
+<p>If you are using dates in the request statements within the services you need to keep the following format:</p>
 
 <table><thead>
 <tr>
-<th>Jaar</th>
-<th>Maand</th>
-<th>Dag</th>
-<th>Scheiding</th>
-<th>Uur</th>
-<th>Minuut</th>
-<th>Seconde</th>
-<th>Tijd zone</th>
+<th>Year</th>
+<th>Month</th>
+<th>Day</th>
+<th>Separator</th>
+<th>Hours</th>
+<th>Minutes</th>
+<th>Seconds</th>
+<th>Time zone</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -499,26 +501,26 @@ waarnemingen opvragen.</p>
 </tr>
 </tbody></table>
 
-<p>Voor meer informatie over het format <a href = "https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations">ISO 8601</a></p>
+<p>For more information on the format <a href = "https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations">ISO 8601</a></p>
 <h1 id='tutorial-locations'>Tutorial Locations</h1><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">Python</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>//Nothing to show check Python
 </code></pre>
-<p>Het volgende script laat zien (stap voor stap) hoe er een lijst met locaties moet worden opgehaald uit de Metadataservice. Als de code 1 op 1 word overgenomen komen er 2 CSV-files uit.</p>
+<p>The following code shows step by step how to get a list of Locaties from the Metadatawebservice service. Within the code you get 2 csv-files </p>
 
 <table><thead>
 <tr>
 <th>CSV- files</th>
-<th>Beschrijving</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>true.csv</td>
-<td>Dit CSV-bestand  bevat alle locaties waar de waarde True is (Er is informatie)</td>
+<td>This will contain all locations with the value true(there is information)</td>
 </tr>
 <tr>
 <td>false.csv</td>
-<td>Dit CSV-bestand bevat alle locaties waar de waarde False is (Er is geen informatie)</td>
+<td>This will contain all locations with the value false(there is no information)</td>
 </tr>
 </tbody></table>
 <h2 id='import'>Import</h2><pre class="highlight python tab-python"><code><span class="c">#within python you use the following imports</span>
@@ -535,11 +537,10 @@ waarnemingen opvragen.</p>
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Dit zijn de &quot;Modules&quot; die nodig zijn om de juiste waardes in het juiste format uit de metadataservice te krijgen python</p>
-
+<p>The following imports are needed to get values from the webservice Metadataservice in python.
 <aside class="notice">
-Mocht er gebruik worden gemaakt van deze code zijn al deze "Modules" nodig. Aan het einde van de documentatie is er een versie lijst met daarin alle modules met versies die gebruikt zijn tijdens het ontwikkelen van het script.
-</aside>
+If you are using the following code you will need all the imports. At the end there will be a version list.
+</aside></p>
 <h2 id='webservices'>Webservices</h2><pre class="highlight python tab-python"><code><span class="c">#the webservices</span>
 <span class="n">collect_catalogus</span> <span class="o">=</span> <span class="p">(</span><span class="s">'https://waterwebservices.rijkswaterstaat.nl/'</span> <span class="o">+</span>
                      <span class="s">'METADATASERVICES_DBO/'</span> <span class="o">+</span>
@@ -552,7 +553,7 @@ Mocht er gebruik worden gemaakt van deze code zijn al deze "Modules" nodig. Aan 
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Er zijn 3 webservices gebruikt in dit script. </p>
+<p>you need 3 different webservices: </p>
 
 <table><thead>
 <tr>
@@ -582,38 +583,43 @@ Mocht er gebruik worden gemaakt van deze code zijn al deze "Modules" nodig. Aan 
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Dit zijn de parameters die gebruikt zijn binnen de aanvraag</p>
+<p>This is the request you need to define in the code:</p>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
 <th>Value</th>
-<th>Beschrijving</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>Eenheden</td>
 <td>true/false</td>
-<td>Dit zal de lijst tonen met  Eenheden.</td>
+<td>This will  show the Eenheden.</td>
 </tr>
 <tr>
 <td>Grootheden</td>
 <td>true/false</td>
-<td>Dit zal de lijst tonen met  Grootheden.</td>
+<td>This will show the Grootheden.</td>
 </tr>
 <tr>
 <td>Hoedanigheden</td>
 <td>true/false</td>
-<td>Dit zal de lijst tonen met  Hoedanigheden.</td>
+<td>This will show the Hoedanigheden.</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
 <td>true/false</td>
-<td>Dit zal de lijst tonen met  Compartimenten.</td>
+<td>This will show the Compartimenten.</td>
+</tr>
+<tr>
+<td>Parameters</td>
+<td>true/false</td>
+<td>This will show the Parameters.</td>
 </tr>
 </tbody></table>
 
-<aside class="warning">Als er gebruik word gemaakt van deze python code moet je de waardes allemaal op TRUE zetten. zoals bij het voorbeeld getoond</aside>
+<aside class="warning">If you want to use the python code described in this documentation you will need to set all the values to true</aside>
 <h2 id='start-end-date'>Start/End date</h2><pre class="highlight python tab-python"><code><span class="n">huidige_datum</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 
 <span class="c">#einddatum word nu de huidige tijd en datum ingevoerd. </span>
@@ -639,38 +645,38 @@ Mocht er gebruik worden gemaakt van deze code zijn al deze "Modules" nodig. Aan 
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Binnen het request <strong>CheckWaarnemingenAanwezig</strong> zijn de volgende parameters nodig:</p>
+<p>Within the request for <strong>CheckWaarnemingenAanwezig</strong> you need to set the following values:</p>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
 <th>Value</th>
-<th>Beschrijving</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>eind_datum</td>
 <td>0000-00-00T00:00:00.000+01:00</td>
-<td>Dit is het format voor  date and time</td>
+<td>This is the format to define the date and time</td>
 </tr>
 <tr>
 <td>Begin_datum</td>
 <td>0000-00-00T00:00:00.000+01:00</td>
-<td>Dit is het format voor date and time</td>
+<td>This is the format to define the date and time</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Dit zal de lijst tonen met  Compartimenten.</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This will show the Compartimenten.</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met Tutorial Values </a></td>
-<td>Dit zal de lijst tonen met  Eenheden.</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This will  show the Eenheden.</td>
 </tr>
 </tbody></table>
 
-<aside class="warning">Voor de datum heb je de volgende format nodig  <code>0000-00-00T00:00:00.000+01:00</code></aside>
+<aside class="warning">for the start and end date you need to use <code>0000-00-00T00:00:00.000+01:00</code> as format</aside>
 <h2 id='transform-json-response'>Transform JSON response</h2><pre class="highlight python tab-python"><code><span class="c">#hier word de locatie lijst gepulled van de api en in een json format opgeslagen.</span>
 <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">collect_catalogus</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
@@ -680,7 +686,7 @@ Mocht er gebruik worden gemaakt van deze code zijn al deze "Modules" nodig. Aan 
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Het volgende script transformeert het json format naar een dataframe.</p>
+<p>The following code transforms the json response to an dataframe.</p>
 <h2 id='check-information'>Check information</h2><pre class="highlight python tab-python"><code><span class="c">#voor elke regel in het dataframe df_locations </span>
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df_locations</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
 <span class="c">#haal de x waarde op</span>
@@ -702,34 +708,34 @@ Mocht er gebruik worden gemaakt van deze code zijn al deze "Modules" nodig. Aan 
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Om te checken of een locatie informatie bevat moet er een 2e request worden gestuurd naar <strong>CheckWaarnemingAanwezig</strong>. Het script in het voorbeeld zal dit voor alle locaties doen binnen de for loop.</p>
+<p>To check if a location has information you need to send a new request to <strong>CheckWaarnemingAanwezig</strong>. The code will do it for every location in a for loop.</p>
 
 <table><thead>
 <tr>
 <th>Parameter</th>
 <th>Value</th>
-<th>Beschrijving</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>eind_datum</td>
 <td>0000-00-00T00:00:00.000+01:00</td>
-<td>Dit is het format voor the date and time</td>
+<td>This is the format to define the date and time</td>
 </tr>
 <tr>
 <td>Begin_datum</td>
 <td>0000-00-00T00:00:00.000+01:00</td>
-<td>Dit is het format voor the date and time</td>
+<td>This is the format to define the date and time</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met Tutorial Values </a></td>
-<td>Dit zal de lijst tonen met Compartimenten.</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This will show the Compartimenten.</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Dit zal de lijst tonen met Eenheden.</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This will  show the Eenheden.</td>
 </tr>
 </tbody></table>
 <h2 id='response-to-dataframe'>Response to dataframe</h2><pre class="highlight python tab-python"><code><span class="c">#hier word een nieuwe statement uitgevoerd op check aantal waarnemingen </span>
@@ -754,21 +760,21 @@ Mocht er gebruik worden gemaakt van deze code zijn al deze "Modules" nodig. Aan 
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Binnen de for loop moet er gecheckt worden of er waardes zijn. De response en de locatie zal daarna naar de juiste dataframe worden gestuurd.</p>
+<p>within the for loop you need to check if there are values. The response and the location wil be send to the right dataframe. </p>
 
 <table><thead>
 <tr>
 <th>Table</th>
-<th>Beschrijbing</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>true.csv</td>
-<td>Dit zal alle locaties bevatten met de waarde True (er is informatie aanwezig)</td>
+<td>This will contain all locations with the value true(there is information)</td>
 </tr>
 <tr>
 <td>false.csv</td>
-<td>Dit zal alle locaties bevatten met de waarde False (er is geen informatie aanwezig)</td>
+<td>This will contain all locations with the value false(there is no information)</td>
 </tr>
 </tbody></table>
 <h2 id='dataframe-to-csv'>Dataframe to csv</h2><pre class="highlight python tab-python"><code><span class="c">#de waarde van resultaat en de code an de locatie word vervolgens toevegoegd </span>
@@ -798,128 +804,128 @@ Mocht er gebruik worden gemaakt van deze code zijn al deze "Modules" nodig. Aan 
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python 
 </code></pre>
-<p>Dit script zal alle dataframes naar de juiste CSV-files sturen.</p>
+<p>This will send all your dataframes wich you created to 2 different csv files:</p>
 
 <table><thead>
 <tr>
 <th>Table</th>
-<th>Beschrijbing</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>true.csv</td>
-<td>Dit zal alle locaties bevatten met de waarde True (er is informatie aanwezig)</td>
+<td>This will contain all locations with the value true(there is information).</td>
 </tr>
 <tr>
 <td>false.csv</td>
-<td>Dit zal alle locaties bevatten met de waarde False (er is geen informatie aanwezig)</td>
+<td>This will contain all locations with the value false(there is no information).</td>
 </tr>
 </tbody></table>
 
 <aside class="notice">
-Het is mogelijk om de namen van de CSV-files te veranderen.
+It's possible to change de names of the files. check the code.
 </aside>
 <h1 id='tutorial-values'>Tutorial Values</h1><pre class="highlight python tab-python"><code><span class="o">//</span> <span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show
 </code></pre>
-<p>De volgende tutorial zal meerdere lijsten meegeven in een CSV-file. Binnen de lijsten zullen de volgende parameters voorkomen:</p>
+<p>The following tutorial will show multiple lists. Within the these lists you will see the following parameters.</p>
 
 <table><thead>
 <tr>
 <th>Sheets</th>
-<th>Beschrijving</th>
-<th>Waarde</th>
+<th>Description</th>
+<th>Value</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>Grootheden</td>
-<td>Deze lijst Grootheden kan worden gebruikt binnen de webservices</td>
+<td>This list Grootheden that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Parameters</td>
-<td>Deze lijst Parameters kan worden gebruikt binnen de webservices</td>
+<td>This list Parameters that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
-<td>Deze lijst Compartimenten kan worden gebruikt binnen de webservices</td>
+<td>This list Compartimenten that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Hoedanigheden</td>
-<td>Deze lijst Hoedanigheden kan worden gebruikt binnen de webservices</td>
+<td>This list Hoedanigheden that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td>Deze lijst Eenheden kan worden gebruikt binnen de webservices</td>
+<td>This list Eenheden that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>BemonsteringsApparaten</td>
-<td>Deze lijst BemonsteringsApparaten kan worden gebruikt binnen de webservices</td>
+<td>This list BemonsteringsApparaten that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>BemonsteringsMethoden</td>
-<td>Deze lijst BemonsteringsMethoden kan worden gebruikt binnen de webservices</td>
+<td>This list BemonsteringsMethoden that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>BemonsteringsSoorten</td>
-<td>Deze lijst BemonsteringsSoorten kan worden gebruikt binnen de webservices</td>
+<td>This list BemonsteringsSoorten that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>BioTaxon</td>
-<td>Deze lijst BioTaxon kan worden gebruikt binnen de webservices</td>
+<td>This list BioTaxon that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>BioTaxon_Compartimenten</td>
-<td>Deze lijst BioTaxon_Compartimenten kan worden gebruikt binnen de webservices</td>
+<td>This list BioTaxon_Compartimenten that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>MeetApparaten</td>
-<td>Deze lijst MeetApparaten kan worden gebruikt binnen de webservices</td>
+<td>This list MeetApparaten that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>MonsterBewerkingsMethoden</td>
-<td>Deze lijst MonsterBewerkingsMethoden kan worden gebruikt binnen de webservices</td>
+<td>This list MonsterBewerkingsMethoden that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Organen</td>
-<td>Deze lijst Organen kan worden gebruikt binnen de webservices</td>
+<td>This list Organen that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>PlaatsBepalingsApparaten</td>
-<td>Deze lijst PlaatsBepalingsApparaten kan worden gebruikt binnen de webservices</td>
+<td>This list PlaatsBepalingsApparaten that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>Typeringen</td>
-<td>Deze lijst Typeringen kan worden gebruikt binnen de webservices</td>
+<td>This list Typeringen that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>WaardeBepalingstechnieken</td>
-<td>Deze lijst WaardeBepalingstechnieken kan worden gebruikt binnen de webservices</td>
+<td>This list WaardeBepalingstechnieken that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>WaardeBepalingsmethoden</td>
-<td>Deze lijst WaardeBepalingsmethoden kan worden gebruikt binnen de webservices</td>
+<td>This list WaardeBepalingsmethoden that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 <tr>
 <td>WaardeBewerkingsmethoden</td>
-<td>Deze lijst WaardeBewerkingsmethoden kan worden gebruikt binnen de webservices</td>
+<td>This list WaardeBewerkingsmethoden that can be used in the webservices</td>
 <td>True/False</td>
 </tr>
 </tbody></table>
@@ -929,11 +935,10 @@ Het is mogelijk om de namen van de CSV-files te veranderen.
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show
 </code></pre>
-<p>De volgende imports zijn nodig om de juiste waardes terug te krijgen uit de webservice MetadataService binnen python en deze tutorial.</p>
+<p>The following imports are needed to get values from the webservice Metadataservice in python and use this tutorial. </p>
 
 <aside class="notice">
-Als er gebruikt wordt gemaakt van dit script moet er gebruik worden gemaakt van alle imports. Aan het einde van de documentatie zal er een lijst zijn met alle module versies die gebruikt zijn tijdens het ontwikkelen van het script.
-
+If you are using the following code you will need all the imports. At the end there will be a version list.
 </aside>
 <h2 id='request'>Request</h2><pre class="highlight python tab-python"><code>
 <span class="n">collect_catalogus</span> <span class="o">=</span> <span class="p">(</span><span class="s">'https://waterwebservices.rijkswaterstaat.nl/METADATASERVICES_DBO/OphalenCatalogus/'</span><span class="p">)</span>
@@ -967,7 +972,7 @@ Als er gebruikt wordt gemaakt van dit script moet er gebruik worden gemaakt van 
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Dit request is nodig om te sturen naar de webservice.</p>
+<p>This code is the request that is needed to send to the webservice.</p>
 <h2 id='response'>Response</h2><pre class="highlight python tab-python"><code><span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">collect_catalogus</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
@@ -1059,7 +1064,7 @@ Als er gebruikt wordt gemaakt van dit script moet er gebruik worden gemaakt van 
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w"> </span><span class="err">check</span><span class="w"> </span><span class="err">Python</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code>// Nothing to show check Python
 </code></pre>
-<p>Het script zal het reponse verwerken in 18 verschillende Sheets:</p>
+<p>The following code will take the response and split all the values into 18 different Sheets: </p>
 
 <table><thead>
 <tr>
@@ -1069,83 +1074,81 @@ Als er gebruikt wordt gemaakt van dit script moet er gebruik worden gemaakt van 
 </thead><tbody>
 <tr>
 <td>Grootheden</td>
-<td>Deze lijst Grootheden kan worden gebruikt binnen de webservices</td>
+<td>This list Grootheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Parameters</td>
-<td>Deze lijst Parameters kan worden gebruikt binnen de webservices</td>
+<td>This list Parameters that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
-<td>Deze lijst Compartimenten kan worden gebruikt binnen de webservices</td>
+<td>This list Compartimenten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Hoedanigheden</td>
-<td>Deze lijst Hoedanigheden kan worden gebruikt binnen de webservices</td>
+<td>This list Hoedanigheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td>Deze lijst Eenheden kan worden gebruikt binnen de webservices</td>
+<td>This list Eenheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsApparaten</td>
-<td>Deze lijst BemonsteringsApparaten kan worden gebruikt binnen de webservices</td>
+<td>This list BemonsteringsApparaten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsMethoden</td>
-<td>Deze lijst BemonsteringsMethoden kan worden gebruikt binnen de webservices</td>
+<td>This list BemonsteringsMethoden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsSoorten</td>
-<td>Deze lijst BemonsteringsSoorten kan worden gebruikt binnen de webservices</td>
+<td>This list BemonsteringsSoorten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>BioTaxon</td>
-<td>Deze lijst BioTaxon kan worden gebruikt binnen de webservices</td>
+<td>This list BioTaxon that can be used in the webservices</td>
 </tr>
 <tr>
 <td>BioTaxon_Compartimenten</td>
-<td>Deze lijst BioTaxon_Compartimenten kan worden gebruikt binnen de webservices</td>
+<td>This list BioTaxon_Compartimenten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>MeetApparaten</td>
-<td>Deze lijst MeetApparatenkan worden gebruikt binnen de webservices</td>
+<td>This list MeetApparaten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>MonsterBewerkingsMethoden</td>
-<td>Deze lijst MonsterBewerkingsMethoden kan worden gebruikt binnen de webservices</td>
+<td>This list MonsterBewerkingsMethoden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Organen</td>
-<td>Deze lijst Organenkan worden gebruikt binnen de webservices</td>
+<td>This list Organen that can be used in the webservices</td>
 </tr>
 <tr>
 <td>PlaatsBepalingsApparaten</td>
-<td>Deze lijst PlaatsBepalingsApparaten kan worden gebruikt binnen de webservices</td>
+<td>This list PlaatsBepalingsApparaten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Typeringen</td>
-<td>Deze lijst Typeringenkan worden gebruikt binnen de webservices</td>
+<td>This list Typeringen that can be used in the webservices</td>
 </tr>
 <tr>
 <td>WaardeBepalingstechnieken</td>
-<td>Deze lijst WaardeBepalingstechnieken kan worden gebruikt binnen de webservices</td>
+<td>This list WaardeBepalingstechnieken that can be used in the webservices</td>
 </tr>
 <tr>
 <td>WaardeBepalingsmethoden</td>
-<td>Deze lijst WaardeBepalingsmethoden kan worden gebruikt binnen de webservices</td>
+<td>This list WaardeBepalingsmethoden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>WaardeBewerkingsmethoden</td>
-<td>Deze lijst WaardeBewerkingsmethoden kan worden gebruikt binnen de webservices</td>
+<td>This list WaardeBewerkingsmethoden that can be used in the webservices</td>
 </tr>
 </tbody></table>
 <h1 id='metadataservice'>Metadataservice</h1>
-<p>De metadataservices webservice ontsluit de distributielaag metadata. Op basis van het request wordt een
-response geformuleerd waarin voor dat betreffende request de metadata wordt verzameld en opgebouwd.
-Het is belangrijk om te weten dat de metadata geen 1 op 1 kopie is van hoe de data in de distributielaag is
-opgeslagen. Het is een verzameling van gegevens gebaseerd op wat er in het request is meegegeven aan
-zoekcriteria.</p>
+<p>The metadata services web service unlocks the distribution layer metadata. On the basis of the request, a
+response is build on the basis of the request that is send with the given parameters.
+It is important to note that the metadata is not a 1 to 1 copy of how the data is saved in the distribution layer. It&#39;s a collection of data based on the parameters in the request that is requested to the service.</p>
 <h2 id='ophalencatalogus'>OphalenCatalogus</h2><pre class="highlight python tab-python"><code><span class="o">//</span> <span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="s2">"CatalogusFilter"</span><span class="p">:</span><span class="w">
     </span><span class="p">{</span><span class="w"> 
@@ -1206,107 +1209,108 @@ zoekcriteria.</p>
 <table><thead>
 <tr>
 <th>Attributes</th>
-<th>Waardes</th>
-<th>Beschrijving</th>
+<th>Values</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>Grootheden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst Grootheden kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Grootheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Parameters</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst Parameters kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Parameters that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst Compartimenten kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Compartimenten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Hoedanigheden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst Hoedanigheden kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Hoedanigheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst Eenheden kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Eenheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsApparaten</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst BemonsteringsApparaten kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list BemonsteringsApparaten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsMethoden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst BemonsteringsMethoden kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list BemonsteringsMethoden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>BemonsteringsSoorten</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst BemonsteringsSoorten kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list BemonsteringsSoorten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>BioTaxon</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst BioTaxon kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list BioTaxon that can be used in the webservices</td>
 </tr>
 <tr>
 <td>BioTaxon_Compartimenten</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst BioTaxon_Compartimenten kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list BioTaxon_Compartimenten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>MeetApparaten</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst MeetApparaten kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list MeetApparaten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>MonsterBewerkingsMethoden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst MonsterBewerkingsMethoden kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list MonsterBewerkingsMethoden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Organen</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst Organen kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Organen that can be used in the webservices</td>
 </tr>
 <tr>
 <td>PlaatsBepalingsApparaten</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst PlaatsBepalingsApparaten kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list PlaatsBepalingsApparaten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Typeringen</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst Typeringen kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Typeringen that can be used in the webservices</td>
 </tr>
 <tr>
 <td>WaardeBepalingstechnieken</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst WaardeBepalingstechnieken kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list WaardeBepalingstechnieken that can be used in the webservices</td>
 </tr>
 <tr>
 <td>WaardeBepalingsmethoden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst WaardeBepalingsmethoden kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list WaardeBepalingsmethoden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>WaardeBewerkingsmethoden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst met  Tutorial Values </a></td>
-<td>Deze lijst WaardeBewerkingsmethoden kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list WaardeBewerkingsmethoden that can be used in the webservices</td>
 </tr>
 </tbody></table>
 <h1 id='onlinewaarnemingenservice'>OnlineWaarnemingenservice</h1>
-<p>De Onlinewaarnemingen ontsluit de distributie laag waarnemingen. Gebaseerd op het request kunnen deze waarnemingen en de daarbij behorende informatie worden verzameld en terug gestuurd naar de eindgebruiker.</p>
+<p>The Onlinewaarnemingen unlocks the distribution layer observations. Based on the request
+there observations and information about the number of observations collected and returned.</p>
 
 <table><thead>
 <tr>
-<th>Functies</th>
+<th>Operations</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -1368,7 +1372,8 @@ zoekcriteria.</p>
     <span class="s2">"Succesvol"</span>:VALUE
     <span class="o">}</span>
 </code></pre>
-<p>Een voorbeeld request voor het ophalen van verschillende waarnemingen van een bepaalde periode, gespecificeerd op Aqoumetadata, Locaties en Waarnemingen.</p>
+<p>A sample request for retrieving observations in a certain period, which
+meet the specified Aquometadata, Locaties and Waarnemingen parameters.</p>
 
 <table><thead>
 <tr>
@@ -1387,49 +1392,49 @@ zoekcriteria.</p>
 <table><thead>
 <tr>
 <th>Attribute</th>
-<th>Waardes</th>
-<th>Beschrijving</th>
+<th>Value</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>Eenheden</td>
-<td><a href='/?python#tutorial-values'>Hoe je de lijst ophaald met de tutorial </a></td>
-<td>Dit zal de lijst tonen met  Eenheden.</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This will  show the Eenheden.</td>
 </tr>
 <tr>
 <td>Grootheden</td>
-<td><a href='/?python#tutorial-values'>Hoe je de lijst ophaald met de tutorial </a></td>
-<td>Dit zal de lijst tonen met Grootheden.</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This will show the Grootheden.</td>
 </tr>
 <tr>
 <td>Hoedanigheden</td>
-<td><a href='/?python#tutorial-values'>Hoe je de lijst ophaald met de tutorial </a></td>
-<td>Dit zal de lijst tonen met Hoedanigheden.</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This will show the Hoedanigheden.</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
-<td><a href='/?python#tutorial-values'>Hoe je de lijst ophaald met de tutorial </a></td>
-<td>Dit zal de lijst tonen met Compartimenten.</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This will show the Compartimenten.</td>
 </tr>
 <tr>
 <td>Parameters</td>
-<td><a href='/?python#tutorial-values'>Hoe je de lijst ophaald met de tutorial </a></td>
-<td>Dit zal de lijst tonen met Parameters.</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This will show the Parameters.</td>
 </tr>
 <tr>
 <td>Meetapparaten</td>
-<td><a href='/?python#tutorial-values'>Hoe je de lijst ophaald met de tutorial </a></td>
-<td>Deze lijst Meetapparaten die kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>List using Tutorial Values </a></td>
+<td>This list Meetapparaten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Locatie</td>
-<td><a href='/?python#tutorial-locations'>Hoe je de lijst ophaald met de Tutorial locations </a></td>
-<td>Dit zal de lijst tonen met locations met en zonder data</td>
+<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
+<td>This will show the locations with and without data.</td>
 </tr>
 <tr>
 <td>Periode</td>
 <td>0000-00-00T00:00:00.000+01:00</td>
-<td>De tijd en datum in het format ISO 8601</td>
+<td>Time in the format</td>
 </tr>
 </tbody></table>
 <h2 id='ophalenlaatstewaarnemingen'>OphalenLaatsteWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
@@ -1506,7 +1511,8 @@ zoekcriteria.</p>
     <span class="s2">"Succesvol"</span>:VALUE
 <span class="o">}</span>
 </code></pre>
-<p>Het volgende request is een voorbeeld request voor het ophalen van de laatste waarneming dat is opgevraagd met de volgende parameters Aquaometadata, Locaties, Waarnemingen.</p>
+<p>The following is a sample request for retrieving the last observation that is requested with the
+specified Aquometadata, Locaties and Waarnemingen parameters.</p>
 
 <table><thead>
 <tr>
@@ -1525,35 +1531,34 @@ zoekcriteria.</p>
 <table><thead>
 <tr>
 <th>Attribute</th>
+<th>Description</th>
 <th>Value</th>
-<th>Beschrijving</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>Compartimenten</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst  </a></td>
-<td>deze lijst  Compartimenten dat kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Compartimenten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst </a></td>
-<td>Deze lijst Eenheden dat kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Eenheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Grootheden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst</a></td>
-<td>dat kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Grootheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>LocatieLijst</td>
-<td><a href='/?python#tutorial-locations'>de lijst met locaties </a></td>
-<td>Dit zal de lijst tonen met locations met en zonder data</td>
+<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
+<td>This will show the locations with and without data.</td>
 </tr>
 </tbody></table>
 
 <aside class="notice">
-Met de parameter Locatielijst kan je meerdere locaties meegeven in 1 request.
-
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
 </aside>
 <h2 id='checkwaarnemingenaanwezig'>CheckWaarnemingenAanwezig</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoMetadataLijst"</span><span class="w"> </span><span class="p">:</span><span class="w">
@@ -1570,7 +1575,7 @@ Met de parameter Locatielijst kan je meerdere locaties meegeven in 1 request.
     <span class="s2">"WaarnemingenAanwezig"</span>:<span class="s2">"true"</span>
     <span class="o">}</span>
 
-Waanneer er geen waardes zijn.
+When there are no Values:
 <span class="o">{</span>
     <span class="s2">"Succesvol"</span>:true,
     <span class="s2">"WaarnemingenAanwezig"</span>:<span class="s2">"false"</span>
@@ -1578,7 +1583,8 @@ Waanneer er geen waardes zijn.
 
 
 </code></pre>
-<p>Aan de rechterkant is er een voorbeeld request voor het checken van de waarnemingen van een bepaalde periode. Rekening gehouden met Aquometadata, Locaties, Waarnemingen parameters.</p>
+<p>Below is a sample request for checking if there are observations for one
+certain period that meet the specified Aquometadata, Locaties and Waarnemingen parameters.</p>
 
 <table><thead>
 <tr>
@@ -1603,29 +1609,28 @@ Waanneer er geen waardes zijn.
 </thead><tbody>
 <tr>
 <td>Compartimenten</td>
-<td><a href='/?python#tutorial-values'>Hoe je de lijst ophaald met de tutorial </a></td>
-<td>Deze lijst Compartimenten dat kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Compartimenten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td><a href='/?python#tutorial-values'>Hoe je de lijst ophaald met de tutorial </a></td>
-<td>Deze lijst Eenheden dat kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Eenheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Periode</td>
 <td>0000-00-00T00:00:00.000+01:00</td>
-<td>De tijd in het volgende format</td>
+<td>Time in the format</td>
 </tr>
 <tr>
 <td>LocatieLijst</td>
-<td><a href='/?python#tutorial-locations'>De lijst met locaties </a></td>
-<td>Dit zal de lijst tonen met locations met en zonder data.</td>
+<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
+<td>This will show the locations with and without data.</td>
 </tr>
 </tbody></table>
 
 <aside class="notice">
-Met de parameter LocatieLijst kunnen er meerdere locaties worden meegegeven binnen èèn request.
-
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
 </aside>
 <h2 id='ophalenaantalwaarnemingen'>OphalenAantalWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">Check</span> <span class="n">JSON</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoMetadataLijst"</span><span class="w"> </span><span class="p">:</span><span class="w">
@@ -1664,10 +1669,12 @@ Met de parameter LocatieLijst kunnen er meerdere locaties worden meegegeven binn
         <span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:VALUE,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"X"</span>:VALUE,<span class="s2">"Y"</span>:VALUE,<span class="s2">"Naam"</span>:<span class="s2">" VALUE"</span>,<span class="s2">"Code"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
         <span class="s2">"AantalMetingenPerPeriodeLijst"</span>:[<span class="o">{</span><span class="s2">"Groeperingsperiode"</span>:<span class="o">{</span><span class="s2">"Jaarnummer"</span>:VALUE,<span class="s2">"Week"</span>:VALUE<span class="o">}</span>,<span class="s2">"AantalMetingen"</span>:VALUE<span class="o">}]}</span>,
 </code></pre>
-<p>Het volgende request is een voorbeeld voor het ophalen van een aantal waarnemingen met een specifieke periode rekening houdend met de volgende parameters Aqoumetadata, Locaties, Waarnemingen. dit wordt vervolgens gegroepeerd op een bepaalde periode.</p>
+<p>The following is an example request for retrieving the number of observations about a certain one
+period that met the specified Aquometadata, Locaties and Waarnemingen parameters, grouped
+over a certain grouping period.</p>
 
 <aside class="notice">
-Deze server werkt nog niet optimaal en er zijn problemen bekend.
+This web service is not used yet and  performance issues are known.
 </aside>
 
 <table><thead>
@@ -1686,20 +1693,20 @@ Deze server werkt nog niet optimaal en er zijn problemen bekend.
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Waarde</th>
-<th>Beschrijving</th>
+<th>Attribute</th>
+<th>Value</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>Compartimenten</td>
-<td><a href='/?python#tutorial-values'> Hoe je de lijst ophaalt met de tutorial </a></td>
-<td>Deze lijst  Compartimenten kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Compartimenten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td><a href='/?python#tutorial-values'> Hoe je de lijst ophaalt met de tutorial </a></td>
-<td>Deze lijst Eenheden worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Eenheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Periode</td>
@@ -1708,21 +1715,20 @@ Deze server werkt nog niet optimaal en er zijn problemen bekend.
 </tr>
 <tr>
 <td>LocatieLijst</td>
-<td><a href='/?python#tutorial-locations'>De lijst vanuit tutorial locations </a></td>
-<td>Dit zal de lijst tonen met locations met en zonder data.</td>
+<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
+<td>This will show the locations with and without data.</td>
 </tr>
 </tbody></table>
 
 <aside class="notice">
-Met Locatielijst wordt het mogelijk om meerdere locaties mee te geven in èèn request.
-
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request.
 </aside>
 <h1 id='bulkwaarnemingservice'>BulkWaarnemingService</h1>
-<p>De BulkWaarnemingenService heeft èèn functie:</p>
+<p>The BulkWaarnemingenService has one function:</p>
 
 <table><thead>
 <tr>
-<th>Functie</th>
+<th>Function</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -1770,7 +1776,14 @@ Met Locatielijst wordt het mogelijk om meerdere locaties mee te geven in èèn r
             <span class="s2">"aanvrager@rws.nl"</span>, <span class="s2">"Subject"</span> : <span class="s2">"Bevestiging vanaanvraag"</span>,<span class="s2">"Body"</span>:<span class="s2">"Uw aanvraag is ontvangen. U ontvangt binnen 24 uur een e-mail met daarin een link voor het downloaden van de aanvraag."</span><span class="o">}</span>,
         <span class="s2">"Succesvol"</span>:true<span class="o">}</span>
 </code></pre>
-<p>Aan de rechterkant bij JSON Request is een voorbeeld te zien van een request naar Bulkwaarnemingen. Deze service is anders als de andere services. Dit heeft te maken met het feit dat er geen directe informatie terug gestuurd word naar de eindgebruiker. Het request word geparkeerd in de distributie webservices database waarna het  kan worden opgehaald op een later tijdstip. Deze data is gebouwd op verschillende variabelen die later opgehaald kunnen worden in een gecompressed file. Zodra deze file is aangemaakt krijgt de eindgebruiker via de mail een bericht en kan het worden gedownload van èèn van de rijkswaterstaat databases. Belangrijk is een valide e-mail adres om er voor te zorgen dat de eindgebruiker het bericht krijgt. Met de requliere expressies kan een e-mail adres gecheckt worden:</p>
+<p>On the right there is a sample request for requesting a Bulk Waarnemingen. This service is different
+of the other web services. This has to do with the fact that there is no information about the observations
+returned immediately. The request is actually parked in the distribution web services database
+after which this data is collected at a later date. This data is based on
+various settings that are collected after which a compressed file is generated. When this
+file is created the applicant is informed that it can be downloaded from a remote location.
+A valid e-mail address must be provided for this purpose. A valid e-mail address meets the
+next regular expression (within quotes):</p>
 
 <p><strong>&quot;^ [a-zA-Z0-9 .<em>% -] + @ [a-zA-Z0-9 .</em>% -] + . [a-zA-Z] {2 , 4} $ &quot;.</strong> </p>
 
@@ -1792,45 +1805,44 @@ Met Locatielijst wordt het mogelijk om meerdere locaties mee te geven in èèn r
 <tr>
 <th>Attribute</th>
 <th>Value</th>
-<th>Beschrijving</th>
+<th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>Grootheden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst via Tutorial Values </a></td>
-<td>Deze lijst Grootheden kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Grootheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Eenheden</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst via Tutorial Values </a></td>
-<td>Deze lijst Eenheden kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Eenheden that can be used in the webservices</td>
 </tr>
 <tr>
 <td>Compartimenten</td>
-<td><a href='/?python#tutorial-values'>Maak je eigen lijst via Tutorial Values </a></td>
-<td>Deze lijst Compartimenten kan worden gebruikt binnen de webservices</td>
+<td><a href='/?python#tutorial-values'>make your own list using Tutorial Values </a></td>
+<td>This list Compartimenten that can be used in the webservices</td>
 </tr>
 <tr>
 <td>LocatieLijst</td>
-<td><a href='/?python#tutorial-locations'>Maak je eigen lijst met  Tutorial locations </a></td>
-<td>Deze lijst zal Locaties tonen.</td>
+<td><a href='/?python#tutorial-locations'>List using Tutorial locations </a></td>
+<td>This will show the locations with and without data.</td>
 </tr>
 </tbody></table>
 
 <aside class="warning">
-De waardes die gebruikt worden bij het voorbeeld zijn niet echt en zouden NOOIT gebruikt mogen worden bij het testen of in een live omgeving.
-
+These values used in the request and response are not real and should not be used any requests or testing. 
 </aside>
 
 <aside class="notice">
-Met de parameter Locatielijst is het mogelijk om meerdere locaties mee te geven in 1 request.
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
 </aside>
 <h1 id='webfeatureservices'>WebFeatureServices</h1>
-<p>Er zijn 2 verschillende WFS functies in de distributie laag:</p>
+<p>There are two available WFS features for the distribution layer:</p>
 
 <table><thead>
 <tr>
-<th>Functie</th>
+<th>Function</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -1907,7 +1919,8 @@ Met de parameter Locatielijst is het mogelijk om meerdere locaties mee te geven 
     &lt;/gml:featureMember&gt;
     &lt;/wfs:FeatureCollection&gt;
 </code></pre>
-<p>Rechts is er een voorbeeld request voor het ophalen van Locaties WFS. In de message body binnen het POST request kun je een filter toevoegen voor het gewenste resultaat.</p>
+<p>On the right is a sample request for calling the Locations WFS. In the message body of
+the POST request you can build a filter to get the desired result.</p>
 
 <table><thead>
 <tr>
@@ -1995,7 +2008,8 @@ Met de parameter Locatielijst is het mogelijk om meerdere locaties mee te geven 
     &lt;/gml:featureMember&gt;
     &lt;/wfs:FeatureCollection&gt;
 </code></pre>
-<p>Het volgende request is een voorbeeld voor het ophalen van locaties met de locatie Met Laatste Waarneming WFS. In de message body binnen het POST request kun je een filter toevoegen voor het gewenste resultaat.</p>
+<p>The following is a sample request for calling the Locations with the LocatiesMetLaatsteWaarneming WFS. In
+the message body of the POST request you can build a filter in order to obtain the desired result.</p>
 
 <table><thead>
 <tr>
@@ -2010,12 +2024,13 @@ Met de parameter Locatielijst is het mogelijk om meerdere locaties mee te geven 
 <td>https://waterwebservices.rijkswaterstaat.nl/services/distributielaagWFS/distributielaag_dbo?SERVICE=WFS&amp;VERSION=1.1.0&amp;REQUEST=GetFeature&amp;TYPENAME=locatiesmetlaatstewaarneming&amp;Maxfeatures=50</td>
 </tr>
 </tbody></table>
-<h1 id='versie'>Versie</h1>
-<p>Hieronder is een lijst te vinden met de verschillende modules(Imports) die gebruikt zijn tijdens de tutorials.
-Mocht er gebruikt worden gemaakt van de tutorials moeten deze module versies worden gebruikt.
+<h1 id='version'>Version</h1>
+<p>Below de modules that are used in the tutorials. 
+If you want to use the tutorials you need these modules.</p>
+
 <aside class="notice">
-Het is mogelijk om oudere of nieuwere versies van de modules te gebuiken maar dit is niet getest tijdens het ontwikkelen van de tutorials.
-</aside></p>
+You can use newer or older versions of the modules but this is not tested in the code.
+</aside>
 <h2 id='python'>Python</h2><pre class="highlight python tab-python"><code><span class="c"># Nothing to show</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Nothing</span><span class="w"> </span><span class="err">to</span><span class="w"> </span><span class="err">show</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code><span class="c"># Nothing to show</span>
@@ -2024,8 +2039,8 @@ Het is mogelijk om oudere of nieuwere versies van de modules te gebuiken maar di
 <table><thead>
 <tr>
 <th>Module</th>
-<th>Beschrijving</th>
-<th>Versie</th>
+<th>Description</th>
+<th>Version</th>
 <th>Link</th>
 </tr>
 </thead><tbody>
@@ -2072,8 +2087,8 @@ Het is mogelijk om oudere of nieuwere versies van de modules te gebuiken maar di
 <td><a href='https://pypi.org/project/objectpath/'>link to documentation </a></td>
 </tr>
 </tbody></table>
-<h1 id='foutmeldingen'>Foutmeldingen</h1>
-<p>De Webservices maken gebruik van de volgende error codes:</p>
+<h1 id='errors'>Errors</h1>
+<p>The Webservices uses the following error codes:</p>
 
 <p>COMING SOON !</p>
 
