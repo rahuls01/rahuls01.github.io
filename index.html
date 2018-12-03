@@ -1177,18 +1177,18 @@ It is important to note that the metadata is not a 1 to 1 copy of how the data i
 <span class="o">{</span><span class="s2">"AquoMetadataLijst"</span>: <span class="o">[</span>
  <span class="o">{</span>
     <span class="s2">"AquoMetadata_MessageID"</span>: 1,
-    <span class="s2">"Parameter_Wat_Omschrijving"</span>: <span class="s2">"VALUE"</span>,
+    <span class="s2">"Parameter_Wat_Omschrijving"</span>: <span class="s2">"Waterhoogte Oppervlaktewater t.o.v. Mean Sea Level in cm"</span>,
     <span class="s2">"Eenheid"</span>: <span class="o">{</span>
-        <span class="s2">"Code"</span>: <span class="s2">"VALUE"</span>,
-        <span class="s2">"Omschrijving"</span>: <span class="s2">"VALUE"</span>
+        <span class="s2">"Code"</span>: <span class="s2">"cm"</span>,
+        <span class="s2">"Omschrijving"</span>: <span class="s2">"centimeter"</span>
     <span class="o">}</span>,
     <span class="s2">"Grootheid"</span>: <span class="o">{</span>
-        <span class="s2">"Code"</span>: <span class="s2">"VALUE"</span>,
-        <span class="s2">"Omschrijving"</span>: <span class="s2">"VALUE"</span>
+        <span class="s2">"Code"</span>: <span class="s2">"WATHTE"</span>,
+        <span class="s2">"Omschrijving"</span>: <span class="s2">"Waterhoogte"</span>
     <span class="o">}</span>,
-    <span class="s2">"Hoedanigheid"</span>: <span class="o">{</span>
-        <span class="s2">"Code"</span>: <span class="s2">"VALUE"</span>,
-        <span class="s2">"Omschrijving"</span>: <span class="s2">"VALUE"</span>
+        <span class="s2">"Hoedanigheid"</span>: <span class="o">{</span>
+        <span class="s2">"Code"</span>: <span class="s2">"MSL"</span>,
+        <span class="s2">"Omschrijving"</span>: <span class="s2">"t.o.v. Mean Sea Level"</span>
     <span class="o">}</span>
  <span class="o">}</span>,
 </code></pre>
@@ -1328,49 +1328,52 @@ there observations and information about the number of observations collected an
 </tbody></table>
 <h2 id='ophalenwaarnemingen'>OphalenWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span> <span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoPlusWaarnemingMetadata"</span><span class="p">:</span><span class="w">
-    </span><span class="p">{</span><span class="s2">"AquoMetadata"</span><span class="p">:{</span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">},</span><span class="w">
-        </span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">},</span><span class="w">
-        </span><span class="s2">"MeetApparaat"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">},</span><span class="w">
-        </span><span class="s2">"Grootheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">}}},</span><span class="w">
-        </span><span class="s2">"Locatie"</span><span class="p">:{</span><span class="s2">"X"</span><span class="p">:</span><span class="err">VALUE</span><span class="p">,</span><span class="s2">"Y"</span><span class="p">:</span><span class="err">VALUE</span><span class="p">,</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">},</span><span class="w">
-        </span><span class="s2">"Periode"</span><span class="p">:{</span><span class="s2">"Begindatumtijd"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">,</span><span class="s2">"Einddatumtijd"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">}</span><span class="w">
+ </span><span class="p">{</span><span class="s2">"AquoMetadata"</span><span class="p">:{</span><span class="s2">"Compartiment"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"OW"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"cm"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"MeetApparaat"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"109"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"Grootheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"Hm0"</span><span class="p">}}},</span><span class="w">
+        </span><span class="s2">"Locatie"</span><span class="p">:{</span><span class="s2">"X"</span><span class="p">:</span><span class="mf">518882.333320247</span><span class="p">,</span><span class="s2">"Y"</span><span class="p">:</span><span class="mf">5760829.11729589</span><span class="p">,</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"EURPFM"</span><span class="p">},</span><span class="w">
+        </span><span class="s2">"Periode"</span><span class="p">:{</span><span class="s2">"Begindatumtijd"</span><span class="p">:</span><span class="s2">"2012-01-27T09:00:00.000+01:00"</span><span class="p">,</span><span class="w">
+                   </span><span class="s2">"Einddatumtijd"</span><span class="p">:</span><span class="s2">"2012-01-27T09:01:00.000+01:00"</span><span class="p">}}</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w"> 
 </span></code></pre><pre class="highlight shell tab-shell"><code><span class="o">{</span><span class="s2">"WaarnemingenLijst"</span>:[
-<span class="o">{</span><span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:VALUE,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"25831"</span>,<span class="s2">"X"</span>:VALUE,<span class="s2">"Y"</span>:VALUE,
-    <span class="s2">"Naam"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Code"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"MetingenLijst"</span>:[<span class="o">{</span><span class="s2">"Tijdstip"</span>:<span class="s2">"VALUE"</span>,
-    <span class="s2">"Meetwaarde"</span>:<span class="o">{</span><span class="s2">"Waarde_Numeriek"</span>:VALUE<span class="o">}</span>,
-    <span class="s2">"WaarnemingMetadata"</span>:<span class="o">{</span><span class="s2">"StatuswaardeLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,
-    <span class="s2">"BemonsteringshoogteLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,
-    <span class="s2">"ReferentievlakLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,
-    <span class="s2">"OpdrachtgevendeInstantieLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,
-    <span class="s2">"KwaliteitswaardecodeLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]}}]</span>,
-    <span class="s2">"AquoMetadata"</span>:<span class="o">{</span><span class="s2">"AquoMetadata_MessageID"</span>:VALUE,
-    <span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"VALUE"</span>,
-    <span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>: <span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Oppervlaktewater"</span><span class="o">}</span>,
-    <span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"WaardeBepalingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"other:VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"WaardeBewerkingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>
-            <span class="o">}</span>
-        <span class="o">}</span>
-    <span class="o">]</span>,
-    <span class="s2">"Succesvol"</span>:VALUE
+    <span class="o">{</span><span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:78411364,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"25831"</span>,<span class="s2">"X"</span>:518882.333320247,<span class="s2">"Y"</span>:5760829.11729589,<span class="s2">"Naam"</span>:<span class="s2">"Europlatform"</span>,<span class="s2">"Code"</span>:<span class="s2">"EURPFM"</span><span class="o">}</span>,
+    <span class="s2">"MetingenLijst"</span>:[<span class="o">{</span><span class="s2">"Tijdstip"</span>:<span class="s2">"2012-01-27T09:00:00.000+01:00"</span>,
+    <span class="s2">"Meetwaarde"</span>:<span class="o">{</span><span class="s2">"Waarde_Numeriek"</span>:152.0<span class="o">}</span>,
+    <span class="s2">"WaarnemingMetadata"</span>:<span class="o">{</span><span class="s2">"StatuswaardeLijst"</span>:[<span class="s2">"Ongecontroleerd"</span><span class="o">]</span>,
+    <span class="s2">"BemonsteringshoogteLijst"</span>:[<span class="s2">"-999999999"</span><span class="o">]</span>,
+    <span class="s2">"ReferentievlakLijst"</span>:[<span class="s2">"NVT"</span><span class="o">]</span>,
+    <span class="s2">"OpdrachtgevendeInstantieLijst"</span>:[<span class="s2">"RIKZMON_GOLVEN"</span><span class="o">]</span>,
+    <span class="s2">"KwaliteitswaardecodeLijst"</span>:[<span class="s2">"00"</span><span class="o">]}}]</span>,
+    <span class="s2">"AquoMetadata"</span>:<span class="o">{</span><span class="s2">"AquoMetadata_MessageID"</span>:31234076,
+    <span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"Significante golfhoogte uit energiespectrum van 30-500 mHz Oppervlaktewater cm"</span>,
+    <span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+    <span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+    <span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"01"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Rechtstreekse meting"</span><span class="o">}</span>,
+    <span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+    <span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+    <span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"OW"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Oppervlaktewater"</span><span class="o">}</span>,
+    <span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"cm"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"centimeter"</span><span class="o">}</span>,
+    <span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"Hm0"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Significantegolfhoogte uit energiespectrum van 30-500 mHz"</span><span class="o">}</span>,
+    <span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waardeis niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"109"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Radar"</span><span class="o">}</span>,
+    <span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is nietvan toepassing"</span><span class="o">}</span>,
+    <span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde isniet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+    <span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is nietvan toepassing"</span><span class="o">}</span>,
+    <span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving
+    "</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+    <span class="s2">"WaardeBepalingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"other:F046"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Freq/tijd analyse energie en richtingen, methodeCIC/GLFPAR"</span><span class="o">}</span>,
+    <span class="s2">"WaardeBewerkingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}}}]</span>,
+    <span class="s2">"Succesvol"</span>:true
     <span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 <p>A sample request for retrieving observations in a certain period, which
 meet the specified Aquometadata, Locaties and Waarnemingen parameters.</p>
@@ -1438,79 +1441,76 @@ meet the specified Aquometadata, Locaties and Waarnemingen parameters.</p>
 </tr>
 </tbody></table>
 <h2 id='ophalenlaatstewaarnemingen'>OphalenLaatsteWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
-</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoPlusWaarnemingMetadataLijst"</span><span class="p">:</span><span class="w">
-    </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="s2">"AquoMetadata"</span><span class="p">:{</span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">},</span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">},</span><span class="w">
-        </span><span class="s2">"Grootheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">}}}],</span><span class="w">
-        </span><span class="s2">"LocatieLijst"</span><span class="p">:[{</span><span class="s2">"X"</span><span class="p">:</span><span class="err">VALUE</span><span class="p">,</span><span class="s2">"Y"</span><span class="p">:</span><span class="err">VALUE</span><span class="p">,</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
+</code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoPlusWaarnemingMetadataLijst"</span><span class="p">:[{</span><span class="s2">"AquoMetadata"</span><span class="p">:{</span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"OW"</span><span class="p">},</span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"cm"</span><span class="p">},</span><span class="w">
+    </span><span class="s2">"Grootheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"H1/3"</span><span class="p">}}}],</span><span class="w">
+    </span><span class="s2">"LocatieLijst"</span><span class="p">:[{</span><span class="s2">"X"</span><span class="p">:</span><span class="mf">518882.333320247</span><span class="p">,</span><span class="s2">"Y"</span><span class="p">:</span><span class="mf">5760829.11729589</span><span class="p">,</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"EURPFM"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code><span class="o">{</span><span class="s2">"WaarnemingenLijst"</span>:[
-<span class="o">{</span><span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:VALUE,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"25831"</span>,<span class="s2">"X"</span>:VALUE,<span class="s2">"Y"</span>:VALUE,<span class="s2">"Naam"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Code"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"MetingenLijst"</span>:[<span class="o">{</span><span class="s2">"Tijdstip"</span>:<span class="s2">"VALUE"</span>,
-    <span class="s2">"Meetwaarde"</span>:<span class="o">{</span><span class="s2">"Waarde_Numeriek"</span>:VALUE<span class="o">}</span>,
-    <span class="s2">"WaarnemingMetadata"</span>:<span class="o">{</span><span class="s2">"StatuswaardeLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,
-    <span class="s2">"BemonsteringshoogteLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,
-    <span class="s2">"ReferentievlakLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,<span class="s2">"OpdrachtgevendeInstantieLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,
-    <span class="s2">"KwaliteitswaardecodeLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]}}]</span>,
-    <span class="s2">"AquoMetadata"</span>:<span class="o">{</span>
-    <span class="s2">"AquoMetadata_MessageID"</span>:VALUE,
-    <span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"VALUE"</span>,
-    <span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"01"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Rechtstreekse meting"</span><span class="o">}</span>,
-    <span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"WaardeBepalingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"other:F046"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Freq/tijd analyse energie en richtingen, methode CIC/GLFPAR"</span><span class="o">}</span>,
-    <span class="s2">"WaardeBewerkingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}}}</span>,
-    <span class="o">{</span><span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:VALUE,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"25831"</span>,<span class="s2">"X"</span>:VALUE,<span class="s2">"Y"</span>:VALUE,<span class="s2">"Naam"</span>:<span class="s2">" VALUE"</span>,<span class="s2">"Code"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-    <span class="s2">"MetingenLijst"</span>:[<span class="o">{</span><span class="s2">"Tijdstip"</span>:<span class="s2">"VALUE"</span>,
-    <span class="s2">"Meetwaarde"</span>:<span class="o">{</span><span class="s2">"Waarde_Numeriek"</span>:VALUE<span class="o">}</span>,
-    <span class="s2">"WaarnemingMetadata"</span>:<span class="o">{</span>
-    <span class="s2">"StatuswaardeLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,
-    <span class="s2">"BemonsteringshoogteLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,
-    <span class="s2">"ReferentievlakLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,
-    <span class="s2">"OpdrachtgevendeInstantieLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]</span>,
-    <span class="s2">"KwaliteitswaardecodeLijst"</span>:[<span class="s2">"VALUE"</span><span class="o">]}}]</span>,
-    <span class="s2">"AquoMetadata"</span>:<span class="o">{</span>
-        <span class="s2">"AquoMetadata_MessageID"</span>:VALUE,
-        <span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"VALUE"</span>,
-        <span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span> :<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">" VALUE"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"WaardeBepalingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"other:VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"WaardeBewerkingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>
-        <span class="o">}</span>
-    <span class="o">}</span>
-<span class="o">]</span>,
-    <span class="s2">"Succesvol"</span>:VALUE
-<span class="o">}</span>
-</code></pre>
+<span class="o">{</span><span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:78411364,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"25831"</span>,<span class="s2">"X"</span>:518882.333320247,<span class="s2">"Y"</span>:5760829.11729589,<span class="s2">"Naam"</span>:<span class="s2">"Euro platform"</span>,<span class="s2">"Code"</span>:<span class="s2">"EURPFM"</span><span class="o">}</span>,
+<span class="s2">"MetingenLijst"</span>:[<span class="o">{</span><span class="s2">"Tijdstip"</span>:<span class="s2">"2012-01-31T23:50:00.000+01:00"</span>,
+<span class="s2">"Meetwaarde"</span>:<span class="o">{</span><span class="s2">"Waarde_Numeriek"</span>:230.0<span class="o">}</span>,
+<span class="s2">"WaarnemingMetadata"</span>:<span class="o">{</span><span class="s2">"StatuswaardeLijst"</span>:[<span class="s2">"Ongecontroleerd"</span><span class="o">]</span>,
+<span class="s2">"BemonsteringshoogteLijst"</span>:[<span class="s2">"-999999999"</span><span class="o">]</span>,
+<span class="s2">"ReferentievlakLijst"</span>:[<span class="s2">"NVT"</span><span class="o">]</span>,<span class="s2">"OpdrachtgevendeInstantieLijst"</span>:[<span class="s2">"RIKZMON_GOLVEN"</span><span class="o">]</span>,
+<span class="s2">"KwaliteitswaardecodeLijst"</span>:[<span class="s2">"00"</span><span class="o">]}}]</span>,
+<span class="s2">"AquoMetadata"</span>:<span class="o">{</span>
+<span class="s2">"AquoMetadata_MessageID"</span>:86395137,
+<span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"Gemiddelde golfhoogte uithoogste 1/3 deel van de golven Oppervlaktewater cm"</span>,
+<span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"01"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Rechtstreekse meting"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"OW"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Oppervlaktewater"</span><span class="o">}</span>,
+<span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"cm"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"centimeter"</span><span class="o">}</span>,
+<span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"H1/3"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Gemiddelde golfhoogte uit hoogste 1/3 deel van de golven"</span><span class="o">}</span>,
+<span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waardeis niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"109"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Radar"</span><span class="o">}</span>,
+<span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving
+"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"WaardeBepalingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"other:F046"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Freq/tijd analyse energie en richtingen, methode CIC/GLFPAR"</span><span class="o">}</span>,
+<span class="s2">"WaardeBewerkingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}}}</span>,
+<span class="o">{</span><span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:78411364,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"25831"</span>,<span class="s2">"X"</span>:518882.333320247,<span class="s2">"Y"</span>:5760829.11729589,<span class="s2">"Naam"</span>:<span class="s2">"Euro platform"</span>,<span class="s2">"Code"</span>:<span class="s2">"EURPFM"</span><span class="o">}</span>,
+<span class="s2">"MetingenLijst"</span>:[<span class="o">{</span><span class="s2">"Tijdstip"</span>:<span class="s2">"2012-01-31T23:50:00.000+01:00"</span>,
+<span class="s2">"Meetwaarde"</span>:<span class="o">{</span><span class="s2">"Waarde_Numeriek"</span>:220.0<span class="o">}</span>,
+<span class="s2">"WaarnemingMetadata"</span>:<span class="o">{</span>
+<span class="s2">"StatuswaardeLijst"</span>:[<span class="s2">"Ongecontroleerd"</span><span class="o">]</span>,
+<span class="s2">"BemonsteringshoogteLijst"</span>:[<span class="s2">"-999999999"</span><span class="o">]</span>,
+<span class="s2">"ReferentievlakLijst"</span>:[<span class="s2">"NVT"</span><span class="o">]</span>,
+<span class="s2">"OpdrachtgevendeInstantieLijst"</span>:[<span class="s2">"RIKZMON_GOLVEN"</span><span class="o">]</span>,
+<span class="s2">"KwaliteitswaardecodeLijst"</span>:[<span class="s2">"00"</span><span class="o">]}}]</span>,
+<span class="s2">"AquoMetadata"</span>:<span class="o">{</span>
+<span class="s2">"AquoMetadata_MessageID"</span>:83052418,
+<span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"Gemiddelde golfhoogte uit hoogste 1/3 deel van de golven Oppervlaktewater cm"</span>,
+<span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"01"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Rechtstreekse meting"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"OW"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Oppervlaktewater"</span><span class="o">}</span>,
+<span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"cm"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"centimeter"</span><span class="o">}</span>,
+<span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"H1/3"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Gemiddelde golfhoogte uit hoogste 1/3 deel van de golven"</span><span class="o">}</span>,
+<span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waardeis niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"108"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Golfmeetboei"</span><span class="o">}</span>,
+<span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving
+</span></code></pre>
 <p>The following is a sample request for retrieving the last observation that is requested with the
 specified Aquometadata, Locaties and Waarnemingen parameters.</p>
 
@@ -1562,14 +1562,11 @@ with the Attribute LocatieLijst it's possible to give multiple locations within 
 </aside>
 <h2 id='checkwaarnemingenaanwezig'>CheckWaarnemingenAanwezig</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">check</span> <span class="n">JSON</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoMetadataLijst"</span><span class="w"> </span><span class="p">:</span><span class="w">
-    </span><span class="p">[{</span><span class="w">
-        </span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">},</span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">}}],</span><span class="w">
-        </span><span class="s2">"LocatieLijst"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"X"</span><span class="w"> </span><span class="p">:</span><span class="err">VALUE</span><span class="p">,</span><span class="s2">"Y"</span><span class="w"> </span><span class="p">:</span><span class="err">VALUE</span><span class="p">,</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">}],</span><span class="w">
-        </span><span class="s2">"Periode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"Begindatumtijd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"VALUE"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"Einddatumtijd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"VALUE"</span><span class="w">
-                </span><span class="p">}</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+    </span><span class="p">[{</span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"OW"</span><span class="p">},</span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"cm"</span><span class="p">}}],</span><span class="w">
+    </span><span class="s2">"LocatieLijst"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"X"</span><span class="w"> </span><span class="p">:</span><span class="mf">518882.333320247</span><span class="p">,</span><span class="s2">"Y"</span><span class="w"> </span><span class="p">:</span><span class="mf">5760829.11729589</span><span class="p">,</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"EURPFM"</span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"Periode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"Begindatumtijd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-01-16T14:00:00.000+01:00"</span><span class="p">,</span><span class="s2">"Einddatumtijd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-01-16T16:00:00.000+01:00"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code><span class="o">{</span>
     <span class="s2">"Succesvol"</span>:true,
     <span class="s2">"WaarnemingenAanwezig"</span>:<span class="s2">"true"</span>
@@ -1634,40 +1631,40 @@ with the Attribute LocatieLijst it's possible to give multiple locations within 
 </aside>
 <h2 id='ophalenaantalwaarnemingen'>OphalenAantalWaarnemingen</h2><pre class="highlight python tab-python"><code><span class="o">//</span><span class="n">Nothing</span> <span class="n">to</span> <span class="n">show</span> <span class="n">Check</span> <span class="n">JSON</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"AquoMetadataLijst"</span><span class="w"> </span><span class="p">:</span><span class="w">
-    </span><span class="p">[{</span><span class="w">
-    </span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">},</span><span class="w">
-    </span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">}}],</span><span class="w">
-    </span><span class="s2">"Groeperingsperiode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"VALUE"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"LocatieLijst"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
-        </span><span class="s2">"X"</span><span class="w"> </span><span class="p">:</span><span class="err">VALUE</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"Y"</span><span class="w"> </span><span class="p">:</span><span class="err">VALUE</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"VALUE"</span><span class="p">}],</span><span class="w">
-    </span><span class="s2">"Periode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"Begindatumtijd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"VALUE"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"Einddatumtijd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VALUE"</span><span class="p">}}</span><span class="w">
+    </span><span class="p">[{</span><span class="s2">"Compartiment"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"OW"</span><span class="p">},</span><span class="s2">"Eenheid"</span><span class="p">:{</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"cm"</span><span class="p">}}],</span><span class="w">
+    </span><span class="s2">"Groeperingsperiode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Week"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"LocatieLijst"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="s2">"X"</span><span class="w"> </span><span class="p">:</span><span class="mf">518882.333320247</span><span class="p">,</span><span class="s2">"Y"</span><span class="w"> </span><span class="p">:</span><span class="mf">5760829.11729589</span><span class="p">,</span><span class="s2">"Code"</span><span class="p">:</span><span class="s2">"EURPFM"</span><span class="p">}],</span><span class="w">
+    </span><span class="s2">"Periode"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="s2">"Begindatumtijd"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-01-16T14:00:00.000+01:00"</span><span class="p">,</span><span class="s2">"Einddatumtijd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-01-16T16:00:00.000+01:00"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre><pre class="highlight shell tab-shell"><code><span class="o">{</span><span class="s2">"AantalWaarnemingenPerPeriodeLijst"</span>:[
-    <span class="o">{</span><span class="s2">"AquoMetadata"</span>:<span class="o">{</span><span class="s2">"AquoMetadata_MessageID"</span>:VALUE,
-        <span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"VALUE"</span>,
-        <span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving "</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"WaardeBepalingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"WaardeBewerkingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"VALUE"</span><span class="o">}}</span>,
-        <span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:VALUE,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"VALUE"</span>,<span class="s2">"X"</span>:VALUE,<span class="s2">"Y"</span>:VALUE,<span class="s2">"Naam"</span>:<span class="s2">" VALUE"</span>,<span class="s2">"Code"</span>:<span class="s2">"VALUE"</span><span class="o">}</span>,
-        <span class="s2">"AantalMetingenPerPeriodeLijst"</span>:[<span class="o">{</span><span class="s2">"Groeperingsperiode"</span>:<span class="o">{</span><span class="s2">"Jaarnummer"</span>:VALUE,<span class="s2">"Week"</span>:VALUE<span class="o">}</span>,<span class="s2">"AantalMetingen"</span>:VALUE<span class="o">}]}</span>,
+<span class="o">{</span><span class="s2">"AquoMetadata"</span>:<span class="o">{</span><span class="s2">"AquoMetadata_MessageID"</span>:30064212,
+<span class="s2">"Parameter_Wat_Omschrijving"</span>:<span class="s2">"Significante golfhoogte uitenergiespectrum van 30-500 mHz Oppervlaktewater cm"</span>,
+<span class="s2">"BemonsteringsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"BemonsteringsSoort"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"01"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Rechtstreekse meting"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"BioTaxon_Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"NVT"</span><span class="o">}</span>,
+<span class="s2">"Compartiment"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"OW"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Oppervlaktewater"</span><span class="o">}</span>,
+<span class="s2">"Eenheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"cm"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"centimeter"</span><span class="o">}</span>,
+<span class="s2">"Grootheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"Hm0"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Significantegolfhoogte uit energiespectrum van 30-500 mHz"</span><span class="o">}</span>,
+<span class="s2">"Hoedanigheid"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"MeetApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"108"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Golfmeetboei"</span><span class="o">}</span>,
+<span class="s2">"MonsterBewerkingsMethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Orgaan"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Parameter"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"PlaatsBepalingsApparaat"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:
+<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"Typering"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"WaardeBepalingstechniek"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving
+"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}</span>,
+<span class="s2">"WaardeBepalingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"other:F046"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Freq/tijd analyse energie en richtingen, methode CIC/GLFPAR"</span><span class="o">}</span>,
+<span class="s2">"WaardeBewerkingsmethode"</span>:<span class="o">{</span><span class="s2">"Code"</span>:<span class="s2">"NVT"</span>,<span class="s2">"Omschrijving"</span>:<span class="s2">"Waarde is niet van toepassing"</span><span class="o">}}</span>,
+<span class="s2">"Locatie"</span>:<span class="o">{</span><span class="s2">"Locatie_MessageID"</span>:78411364,<span class="s2">"Coordinatenstelsel"</span>:<span class="s2">"25831"</span>,<span class="s2">"X"</span>:518882.333320247,<span class="s2">"Y"</span>:5760829.11729589,<span class="s2">"Naam"</span>:<span class="s2">"Euro platform"</span>,<span class="s2">"Code"</span>:<span class="s2">"EURPFM"</span><span class="o">}</span>,
+<span class="s2">"AantalMetingenPerPeriodeLijst"</span>:[<span class="o">{</span><span class="s2">"Groeperingsperiode"</span>:<span class="o">{</span><span class="s2">"Jaarnummer"</span>:2012,<span class="s2">"Week"</span>:3<span class="o">}</span>,<span class="s2">"AantalMetingen"</span>:21<span class="o">}]</span>
+<span class="o">}</span>,
 </code></pre>
 <p>The following is an example request for retrieving the number of observations about a certain one
 period that met the specified Aquometadata, Locaties and Waarnemingen parameters, grouped
