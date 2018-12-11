@@ -84,22 +84,14 @@ There are two available WFS features for the distribution layer:
     </wfs:FeatureCollection>
 ```
 
-Below is a sample request for calling the Locations WFS. In the message body of
-the POST request one can build a filter to get the desired result.
+On the right is a sample request for calling the Locations WFS. In the message body of
+the POST request you can build a filter to get the desired result.
 
 
 Methode | Content-Type | URL
 --------- | ----------- | -----------
-POST | application/json | https://waterwebservices.rijkswaterstaat.nl/services/distributielaagWFS/distributielaag_dbo?SERVICE=WFS&VER
-SION=1.1.0&REQUEST=GetCapabilities
+POST | application/json | https://waterwebservices.rijkswaterstaat.nl/services/distributielaagWFS/distributielaag_dbo?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetCapabilities
 
-
-Attribute | Value | Description
---------- | ----------- | --------- 
-| Grootheden |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Grootheden that can be used in the webservices |
-| Eenheden |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Eenheden that can be used in the webservices |
-| Compartimenten |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Compartimenten that can be used in the webservices |
-LocatieLijst | Vul dit later aan | vul dit later aan
 
 
 ## LocatiesMetLaatsteWaarneming
@@ -188,18 +180,10 @@ LocatieLijst | Vul dit later aan | vul dit later aan
 ```
 
 
-The following is a sample request for calling the Locations with the Release WFS. In
-the message body of the POST request one can build a filter in order to obtain the desired resultask.
+The following is a sample request for calling the Locations with the LocatiesMetLaatsteWaarneming WFS. In
+the message body of the POST request you can build a filter in order to obtain the desired result.
 
 Methode | Content-Type | URL
 --------- | ----------- | -----------
 POST | application/json | https://waterwebservices.rijkswaterstaat.nl/services/distributielaagWFS/distributielaag_dbo?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&TYPENAME=locatiesmetlaatstewaarneming&Maxfeatures=50
-
-
-Attribute | Value | Description
---------- | ----------- | --------- 
-| Grootheden |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Grootheden that can be used in the webservices |
-| Eenheden |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Eenheden that can be used in the webservices |
-| Compartimenten |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Compartimenten that can be used in the webservices |
-LocatieLijst | Vul dit later aan | vul dit later aan
 

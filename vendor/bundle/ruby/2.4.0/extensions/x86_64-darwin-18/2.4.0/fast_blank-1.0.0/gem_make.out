@@ -1,0 +1,15 @@
+current directory: /Users/rahulsharma/Documents/stage/querybuilder/slate/slate/vendor/bundle/ruby/2.4.0/gems/fast_blank-1.0.0/ext/fast_blank
+/Users/rahulsharma/.rvm/rubies/ruby-2.4.2/bin/ruby -r ./siteconf20181106-51405-1e9sawr.rb extconf.rb
+creating Makefile
+
+current directory: /Users/rahulsharma/Documents/stage/querybuilder/slate/slate/vendor/bundle/ruby/2.4.0/gems/fast_blank-1.0.0/ext/fast_blank
+make "DESTDIR=" clean
+
+current directory: /Users/rahulsharma/Documents/stage/querybuilder/slate/slate/vendor/bundle/ruby/2.4.0/gems/fast_blank-1.0.0/ext/fast_blank
+make "DESTDIR="
+compiling fast_blank.c
+linking shared-object fast_blank.bundle
+
+current directory: /Users/rahulsharma/Documents/stage/querybuilder/slate/slate/vendor/bundle/ruby/2.4.0/gems/fast_blank-1.0.0/ext/fast_blank
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 fast_blank.bundle ./.gem.20181106-51405-mh50cd

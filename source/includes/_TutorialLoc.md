@@ -148,7 +148,7 @@ df_locatie = pd.DataFrame( columns=columns)
 // Nothing to show check Python
 ```
 
-Within the request for checkaanwezigwaarnemingen you need to set the following values:
+Within the request for **CheckWaarnemingenAanwezig** you need to set the following values:
 
 Parameter | Value | Description
 --------- | ------- | -----------
@@ -209,7 +209,7 @@ for index, row in df_locations.iterrows():
 ```shell
 // Nothing to show check Python
 ```
-To check if a location has information you need to send a new request to checkaanwezigheidwaarneming. The code will do it every location in a for loop.
+To check if a location has information you need to send a new request to **CheckWaarnemingAanwezig**. The code will do it for every location in a for loop.
 
 Parameter | Value | Description
 --------- | ------- | -----------
@@ -250,7 +250,7 @@ Eenheden | <a href='/?python#tutorial-values'>make your own list using Tutorial 
 ```shell
 // Nothing to show check Python
 ```
-within the forloop you need to check if there are values. The response and the location wil be send to the right dataframe 
+within the for loop you need to check if there are values. The response and the location wil be send to the right dataframe. 
 
 Table | Description
 --------- | -----------
@@ -296,13 +296,13 @@ writer.save()
 // Nothing to show check Python 
 ```
 
-This will send all your dataframes wich you created to 2 different csv files
+This will send all your dataframes wich you created to 2 different csv files:
 
 Table | Description
 --------- | -----------
-true.csv | This will contain all locations with the value true(there is information)
-false.csv | This will contain all locations with the value false(there is no information)
+true.csv | This will contain all locations with the value true(there is information).
+false.csv | This will contain all locations with the value false(there is no information).
 
 <aside class="notice">
-You can change the name of the files 
+It's possible to change de names of the files. check the code.
 </aside>

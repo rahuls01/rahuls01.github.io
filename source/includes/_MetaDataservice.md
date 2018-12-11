@@ -1,11 +1,8 @@
 #Metadataservice
 
 The metadata services web service unlocks the distribution layer metadata. On the basis of the request, a
-response gestuted before that concerning request the metadata is collected and built up.
-It is important to note that the metadata is not a 1 to 1 copy of how the data is in the distribution layer
-saved. It is a collection of data on a question in the request is given to
-search criteria.
-
+response is build on the basis of the request that is send with the given parameters.
+It is important to note that the metadata is not a 1 to 1 copy of how the data is saved in the distribution layer. It's a collection of data based on the parameters in the request that is requested to the service.
 
 
 
@@ -46,18 +43,18 @@ search criteria.
 {"AquoMetadataLijst": [
  {
     "AquoMetadata_MessageID": 1,
-    "Parameter_Wat_Omschrijving": "VALUE",
+    "Parameter_Wat_Omschrijving": "Waterhoogte Oppervlaktewater t.o.v. Mean Sea Level in cm",
     "Eenheid": {
-        "Code": "VALUE",
-        "Omschrijving": "VALUE"
+        "Code": "cm",
+        "Omschrijving": "centimeter"
     },
     "Grootheid": {
-        "Code": "VALUE",
-        "Omschrijving": "VALUE"
+        "Code": "WATHTE",
+        "Omschrijving": "Waterhoogte"
     },
-    "Hoedanigheid": {
-        "Code": "VALUE",
-        "Omschrijving": "VALUE"
+        "Hoedanigheid": {
+        "Code": "MSL",
+        "Omschrijving": "t.o.v. Mean Sea Level"
     }
  },
 ```

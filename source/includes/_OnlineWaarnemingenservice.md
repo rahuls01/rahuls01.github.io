@@ -1,6 +1,6 @@
 # OnlineWaarnemingenservice
 The Onlinewaarnemingen unlocks the distribution layer observations. Based on the request
-there observations and information about the number of observations collected and built up.
+there observations and information about the number of observations collected and returned.
 
  Operations | 
 | ----- |
@@ -18,54 +18,57 @@ there observations and information about the number of observations collected an
 
 ```json
 {"AquoPlusWaarnemingMetadata":
-    {"AquoMetadata":{"Compartiment":{"Code":"VALUE"},
-        "Eenheid":{"Code":"VALUE"},
-        "MeetApparaat":{"Code":"VALUE"},
-        "Grootheid":{"Code":"VALUE"}}},
-        "Locatie":{"X":VALUE,"Y":VALUE,"Code":"VALUE"},
-        "Periode":{"Begindatumtijd":"VALUE","Einddatumtijd":"VALUE"}
+ {"AquoMetadata":{"Compartiment":
+    {"Code":"OW"},
+        "Eenheid":{"Code":"cm"},
+        "MeetApparaat":{"Code":"109"},
+        "Grootheid":{"Code":"Hm0"}}},
+        "Locatie":{"X":518882.333320247,"Y":5760829.11729589,"Code":"EURPFM"},
+        "Periode":{"Begindatumtijd":"2012-01-27T09:00:00.000+01:00",
+                   "Einddatumtijd":"2012-01-27T09:01:00.000+01:00"}}
     }
 } 
 ```
 ```shell
 {"WaarnemingenLijst":[
-{"Locatie":{"Locatie_MessageID":VALUE,"Coordinatenstelsel":"25831","X":VALUE,"Y":VALUE,
-    "Naam":"VALUE","Code":"VALUE"},
-    "MetingenLijst":[{"Tijdstip":"VALUE",
-    "Meetwaarde":{"Waarde_Numeriek":VALUE},
-    "WaarnemingMetadata":{"StatuswaardeLijst":["VALUE"],
-    "BemonsteringshoogteLijst":["VALUE"],
-    "ReferentievlakLijst":["VALUE"],
-    "OpdrachtgevendeInstantieLijst":["VALUE"],
-    "KwaliteitswaardecodeLijst":["VALUE"]}}],
-    "AquoMetadata":{"AquoMetadata_MessageID":VALUE,
-    "Parameter_Wat_Omschrijving":"VALUE",
-    "BemonsteringsApparaat":{"Code":"VALUE","Omschrijving": "VALUE"},
-    "BemonsteringsMethode":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "BemonsteringsSoort":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "BioTaxon":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "BioTaxon_Compartiment":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Compartiment":{"Code":"VALUE","Omschrijving":"Oppervlaktewater"},
-    "Eenheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Grootheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Hoedanigheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "MeetApparaat":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "MonsterBewerkingsMethode":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Orgaan":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Parameter":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "PlaatsBepalingsApparaat":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Typering":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "WaardeBepalingstechniek":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "WaardeBepalingsmethode":{"Code":"other:VALUE","Omschrijving":"VALUE"},
-    "WaardeBewerkingsmethode":{"Code":"VALUE","Omschrijving":"VALUE"}
-            }
-        }
-    ],
-    "Succesvol":VALUE
+    {"Locatie":{"Locatie_MessageID":78411364,"Coordinatenstelsel":"25831","X":518882.333320247,"Y":5760829.11729589,"Naam":"Europlatform","Code":"EURPFM"},
+    "MetingenLijst":[{"Tijdstip":"2012-01-27T09:00:00.000+01:00",
+    "Meetwaarde":{"Waarde_Numeriek":152.0},
+    "WaarnemingMetadata":{"StatuswaardeLijst":["Ongecontroleerd"],
+    "BemonsteringshoogteLijst":["-999999999"],
+    "ReferentievlakLijst":["NVT"],
+    "OpdrachtgevendeInstantieLijst":["RIKZMON_GOLVEN"],
+    "KwaliteitswaardecodeLijst":["00"]}}],
+    "AquoMetadata":{"AquoMetadata_MessageID":31234076,
+    "Parameter_Wat_Omschrijving":"Significante golfhoogte uit energiespectrum van 30-500 mHz Oppervlaktewater cm",
+    "BemonsteringsApparaat":{"Code":"NVT","Omschrijving":
+    "Waarde is niet van toepassing"},
+    "BemonsteringsMethode":{"Code":"NVT","Omschrijving":
+    "Waarde is niet van toepassing"},
+    "BemonsteringsSoort":{"Code":"01","Omschrijving":"Rechtstreekse meting"},
+    "BioTaxon":{"Code":"NVT","Omschrijving":"NVT"},
+    "BioTaxon_Compartiment":{"Code":"NVT","Omschrijving":"NVT"},
+    "Compartiment":{"Code":"OW","Omschrijving":"Oppervlaktewater"},
+    "Eenheid":{"Code":"cm","Omschrijving":"centimeter"},
+    "Grootheid":{"Code":"Hm0","Omschrijving":"Significantegolfhoogte uit energiespectrum van 30-500 mHz"},
+    "Hoedanigheid":{"Code":"NVT","Omschrijving":"Waardeis niet van toepassing"},
+    "MeetApparaat":{"Code":"109","Omschrijving":"Radar"},
+    "MonsterBewerkingsMethode":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+    "Orgaan":{"Code":"NVT","Omschrijving":"Waarde is nietvan toepassing"},
+    "Parameter":{"Code":"NVT","Omschrijving":"Waarde isniet van toepassing"},
+    "PlaatsBepalingsApparaat":{"Code":"NVT","Omschrijving":
+    "Waarde is niet van toepassing"},
+    "Typering":{"Code":"NVT","Omschrijving":"Waarde is nietvan toepassing"},
+    "WaardeBepalingstechniek":{"Code":"NVT","Omschrijving
+    ":"Waarde is niet van toepassing"},
+    "WaardeBepalingsmethode":{"Code":"other:F046","Omschrijving":"Freq/tijd analyse energie en richtingen, methodeCIC/GLFPAR"},
+    "WaardeBewerkingsmethode":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"}}}],
+    "Succesvol":true
     }
+}
 ```
 A sample request for retrieving observations in a certain period, which
-meet the specified aquometadata, locations (s) and observation metadata.
+meet the specified Aquometadata, Locaties and Waarnemingen parameters.
 
 Methode | Content-Type | URL
 --------- | ----------- | -----------
@@ -90,86 +93,83 @@ Periode | 0000-00-00T00:00:00.000+01:00 | Time in the format
 //Nothing to show check JSON
 ```
 ```json
-{"AquoPlusWaarnemingMetadataLijst":
-    [
-        {"AquoMetadata":{"Compartiment":{"Code":"VALUE"},"Eenheid":{"Code":"VALUE"},
-        "Grootheid":{"Code":"VALUE"}}}],
-        "LocatieLijst":[{"X":VALUE,"Y":VALUE,"Code":"VALUE"
-        }
-    ]
+{"AquoPlusWaarnemingMetadataLijst":[{"AquoMetadata":{"Compartiment":{"Code":"OW"},"Eenheid":{"Code":"cm"},
+    "Grootheid":{"Code":"H1/3"}}}],
+    "LocatieLijst":[{"X":518882.333320247,"Y":5760829.11729589,"Code":"EURPFM"
+    }]
 }
 ```
 
 ```shell
 {"WaarnemingenLijst":[
-{"Locatie":{"Locatie_MessageID":VALUE,"Coordinatenstelsel":"25831","X":VALUE,"Y":VALUE,"Naam":"VALUE","Code":"VALUE"},
-    "MetingenLijst":[{"Tijdstip":"VALUE",
-    "Meetwaarde":{"Waarde_Numeriek":VALUE},
-    "WaarnemingMetadata":{"StatuswaardeLijst":["VALUE"],
-    "BemonsteringshoogteLijst":["VALUE"],
-    "ReferentievlakLijst":["VALUE"],"OpdrachtgevendeInstantieLijst":["VALUE"],
-    "KwaliteitswaardecodeLijst":["VALUE"]}}],
-    "AquoMetadata":{
-    "AquoMetadata_MessageID":VALUE,
-    "Parameter_Wat_Omschrijving":"VALUE",
-    "BemonsteringsApparaat":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "BemonsteringsMethode":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "BemonsteringsSoort":{"Code":"01","Omschrijving":"Rechtstreekse meting"},
-    "BioTaxon":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "BioTaxon_Compartiment":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Compartiment":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Eenheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Grootheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Hoedanigheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "MeetApparaat":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "MonsterBewerkingsMethode":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Orgaan":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Parameter":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "PlaatsBepalingsApparaat":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "Typering":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "WaardeBepalingstechniek":{"Code":"VALUE","Omschrijving":"VALUE"},
-    "WaardeBepalingsmethode":{"Code":"other:F046","Omschrijving":"Freq/tijd analyse energie en richtingen, methode CIC/GLFPAR"},
-    "WaardeBewerkingsmethode":{"Code":"VALUE","Omschrijving":"VALUE"}}},
-    {"Locatie":{"Locatie_MessageID":VALUE,"Coordinatenstelsel":"25831","X":VALUE,"Y":VALUE,"Naam":" VALUE","Code":"VALUE"},
-    "MetingenLijst":[{"Tijdstip":"VALUE",
-    "Meetwaarde":{"Waarde_Numeriek":VALUE},
-    "WaarnemingMetadata":{
-    "StatuswaardeLijst":["VALUE"],
-    "BemonsteringshoogteLijst":["VALUE"],
-    "ReferentievlakLijst":["VALUE"],
-    "OpdrachtgevendeInstantieLijst":["VALUE"],
-    "KwaliteitswaardecodeLijst":["VALUE"]}}],
-    "AquoMetadata":{
-        "AquoMetadata_MessageID":VALUE,
-        "Parameter_Wat_Omschrijving":"VALUE",
-        "BemonsteringsApparaat":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "BemonsteringsMethode":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "BemonsteringsSoort":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "BioTaxon":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "BioTaxon_Compartiment":{"Code":"VALUE","Omschrijving" :"VALUE"},
-        "Compartiment":{"Code":"VALUE","VALUE"},
-        "Eenheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "Grootheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "Hoedanigheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "MeetApparaat":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "MonsterBewerkingsMethode":{"Code":"VALUE"," VALUE":"VALUE"},
-        "Orgaan":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "Parameter":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "PlaatsBepalingsApparaat":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "Typering":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "WaardeBepalingstechniek":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "WaardeBepalingsmethode":{"Code":"other:VALUE","Omschrijving":"VALUE"},
-        "WaardeBewerkingsmethode":{"Code":"VALUE","Omschrijving":"VALUE"}
-        }
-    }
-],
-    "Succesvol":VALUE
-}
+{"Locatie":{"Locatie_MessageID":78411364,"Coordinatenstelsel":"25831","X":518882.333320247,"Y":5760829.11729589,"Naam":"Euro platform","Code":"EURPFM"},
+"MetingenLijst":[{"Tijdstip":"2012-01-31T23:50:00.000+01:00",
+"Meetwaarde":{"Waarde_Numeriek":230.0},
+"WaarnemingMetadata":{"StatuswaardeLijst":["Ongecontroleerd"],
+"BemonsteringshoogteLijst":["-999999999"],
+"ReferentievlakLijst":["NVT"],"OpdrachtgevendeInstantieLijst":["RIKZMON_GOLVEN"],
+"KwaliteitswaardecodeLijst":["00"]}}],
+"AquoMetadata":{
+"AquoMetadata_MessageID":86395137,
+"Parameter_Wat_Omschrijving":"Gemiddelde golfhoogte uithoogste 1/3 deel van de golven Oppervlaktewater cm",
+"BemonsteringsApparaat":{"Code":"NVT","Omschrijving":
+"Waarde is niet van toepassing"},
+"BemonsteringsMethode":{"Code":"NVT","Omschrijving":
+"Waarde is niet van toepassing"},
+"BemonsteringsSoort":{"Code":"01","Omschrijving":"Rechtstreekse meting"},
+"BioTaxon":{"Code":"NVT","Omschrijving":"NVT"},
+"BioTaxon_Compartiment":{"Code":"NVT","Omschrijving":"NVT"},
+"Compartiment":{"Code":"OW","Omschrijving":"Oppervlaktewater"},
+"Eenheid":{"Code":"cm","Omschrijving":"centimeter"},
+"Grootheid":{"Code":"H1/3","Omschrijving":"Gemiddelde golfhoogte uit hoogste 1/3 deel van de golven"},
+"Hoedanigheid":{"Code":"NVT","Omschrijving":"Waardeis niet van toepassing"},
+"MeetApparaat":{"Code":"109","Omschrijving":"Radar"},
+"MonsterBewerkingsMethode":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"Orgaan":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"Parameter":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"PlaatsBepalingsApparaat":{"Code":"NVT","Omschrijving":
+"Waarde is niet van toepassing"},
+"Typering":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"WaardeBepalingstechniek":{"Code":"NVT","Omschrijving
+":"Waarde is niet van toepassing"},
+"WaardeBepalingsmethode":{"Code":"other:F046","Omschrijving":"Freq/tijd analyse energie en richtingen, methode CIC/GLFPAR"},
+"WaardeBewerkingsmethode":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"}}},
+{"Locatie":{"Locatie_MessageID":78411364,"Coordinatenstelsel":"25831","X":518882.333320247,"Y":5760829.11729589,"Naam":"Euro platform","Code":"EURPFM"},
+"MetingenLijst":[{"Tijdstip":"2012-01-31T23:50:00.000+01:00",
+"Meetwaarde":{"Waarde_Numeriek":220.0},
+"WaarnemingMetadata":{
+"StatuswaardeLijst":["Ongecontroleerd"],
+"BemonsteringshoogteLijst":["-999999999"],
+"ReferentievlakLijst":["NVT"],
+"OpdrachtgevendeInstantieLijst":["RIKZMON_GOLVEN"],
+"KwaliteitswaardecodeLijst":["00"]}}],
+"AquoMetadata":{
+"AquoMetadata_MessageID":83052418,
+"Parameter_Wat_Omschrijving":"Gemiddelde golfhoogte uit hoogste 1/3 deel van de golven Oppervlaktewater cm",
+"BemonsteringsApparaat":{"Code":"NVT","Omschrijving":
+"Waarde is niet van toepassing"},
+"BemonsteringsMethode":{"Code":"NVT","Omschrijving":
+"Waarde is niet van toepassing"},
+"BemonsteringsSoort":{"Code":"01","Omschrijving":"Rechtstreekse meting"},
+"BioTaxon":{"Code":"NVT","Omschrijving":"NVT"},
+"BioTaxon_Compartiment":{"Code":"NVT","Omschrijving":"NVT"},
+"Compartiment":{"Code":"OW","Omschrijving":"Oppervlaktewater"},
+"Eenheid":{"Code":"cm","Omschrijving":"centimeter"},
+"Grootheid":{"Code":"H1/3","Omschrijving":"Gemiddelde golfhoogte uit hoogste 1/3 deel van de golven"},
+"Hoedanigheid":{"Code":"NVT","Omschrijving":"Waardeis niet van toepassing"},
+"MeetApparaat":{"Code":"108","Omschrijving":"Golfmeetboei"},
+"MonsterBewerkingsMethode":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"Orgaan":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"Parameter":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"PlaatsBepalingsApparaat":{"Code":"NVT","Omschrijving":
+"Waarde is niet van toepassing"},
+"Typering":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"WaardeBepalingstechniek":{"Code":"NVT","Omschrijving
 ```
 
 
-The following is a sample request for retrieving the last observation that satisfy the
-specified aquometadata, locations (s) and observation metadata.
+The following is a sample request for retrieving the last observation that is requested with the
+specified Aquometadata, Locaties and Waarnemingen parameters.
 
 Methode | Content-Type | URL
 --------- | ----------- | -----------
@@ -180,10 +180,13 @@ Attribute | Description | Value
 | Compartimenten |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Compartimenten that can be used in the webservices |
 | Eenheden |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Eenheden that can be used in the webservices |
 | Grootheden |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Grootheden that can be used in the webservices |
-LocatieLijst | Vul dit later aan | vul dit later aan
+LocatieLijst | <a href='/?python#tutorial-locations'>List using Tutorial locations </a>  | This will show the locations with and without data.
 
+<aside class="notice">
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
+</aside>
 
-## CheckWaarnemingen Aanwezig
+## CheckWaarnemingenAanwezig
 
 ```python
 //Nothing to show check JSON
@@ -191,14 +194,11 @@ LocatieLijst | Vul dit later aan | vul dit later aan
 
 ```json
 {"AquoMetadataLijst" :
-    [{
-        "Compartiment":{"Code":"VALUE"},"Eenheid":{"Code":"VALUE"}}],
-        "LocatieLijst" : [{"X" :VALUE,"Y" :VALUE,"Code":"VALUE"}],
-        "Periode" : {
-                "Begindatumtijd" : "VALUE",
-                "Einddatumtijd" : "VALUE"
-                }
-        }
+    [{"Compartiment":{"Code":"OW"},"Eenheid":{"Code":"cm"}}],
+    "LocatieLijst" : [{"X" :518882.333320247,"Y" :5760829.11729589,"Code":"EURPFM"}],
+    "Periode" : {"Begindatumtijd" : "2012-01-16T14:00:00.000+01:00","Einddatumtijd": "2012-01-16T16:00:00.000+01:00"
+    }
+}
 ```
 
 ```shell
@@ -217,7 +217,7 @@ When there are no Values:
 ```
 
 Below is a sample request for checking if there are observations for one
-certain period that meet the specified aquometadata, locations (s) and observation metadata.
+certain period that meet the specified Aquometadata, Locaties and Waarnemingen parameters.
 
 Methode | Content-Type | URL
 --------- | ----------- | -----------
@@ -229,7 +229,11 @@ Atrribute | Value | Description
 | Compartimenten |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Compartimenten that can be used in the webservices |
 | Eenheden |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Eenheden that can be used in the webservices |
 Periode | 0000-00-00T00:00:00.000+01:00 | Time in the format 
-LocatieLijst | Vul dit later aan | vul dit later aan
+LocatieLijst | <a href='/?python#tutorial-locations'>List using Tutorial locations </a>  | This will show the locations with and without data.
+
+<aside class="notice">
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request 
+</aside>
 
 ## OphalenAantalWaarnemingen
 
@@ -238,49 +242,53 @@ LocatieLijst | Vul dit later aan | vul dit later aan
 ```
 ```json
 {"AquoMetadataLijst" :
-    [{
-    "Compartiment":{"Code":"VALUE"},
-    "Eenheid":{"Code":"VALUE"}}],
-    "Groeperingsperiode" : "VALUE",
-    "LocatieLijst" : [{
-        "X" :VALUE,
-        "Y" :VALUE,
-        "Code":"VALUE"}],
-    "Periode" : {
-        "Begindatumtijd" : "VALUE",
-        "Einddatumtijd": "VALUE"}}
+    [{"Compartiment":{"Code":"OW"},"Eenheid":{"Code":"cm"}}],
+    "Groeperingsperiode" : "Week",
+    "LocatieLijst" : [{"X" :518882.333320247,"Y" :5760829.11729589,"Code":"EURPFM"}],
+    "Periode" : {"Begindatumtijd" : "2012-01-16T14:00:00.000+01:00","Einddatumtijd": "2012-01-16T16:00:00.000+01:00"
+    }
+}
 ```
 
 ```shell 
 {"AantalWaarnemingenPerPeriodeLijst":[
-    {"AquoMetadata":{"AquoMetadata_MessageID":VALUE,
-        "Parameter_Wat_Omschrijving":"VALUE",
-        "BemonsteringsApparaat":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "BemonsteringsMethode":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "BemonsteringsSoort":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "BioTaxon":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "BioTaxon_Compartiment":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "Compartiment":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "Eenheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "Grootheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "Hoedanigheid":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "MeetApparaat":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "MonsterBewerkingsMethode":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "Orgaan":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "Parameter":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "PlaatsBepalingsApparaat":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "Typering":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "WaardeBepalingstechniek":{"Code":"VALUE","Omschrijving ":"VALUE"},
-        "WaardeBepalingsmethode":{"Code":"VALUE","Omschrijving":"VALUE"},
-        "WaardeBewerkingsmethode":{"Code":"VALUE","Omschrijving":"VALUE"}},
-        "Locatie":{"Locatie_MessageID":VALUE,"Coordinatenstelsel":"VALUE","X":VALUE,"Y":VALUE,"Naam":" VALUE","Code":"VALUE"},
-        "AantalMetingenPerPeriodeLijst":[{"Groeperingsperiode":{"Jaarnummer":VALUE,"Week":VALUE},"AantalMetingen":VALUE}]},
+{"AquoMetadata":{"AquoMetadata_MessageID":30064212,
+"Parameter_Wat_Omschrijving":"Significante golfhoogte uitenergiespectrum van 30-500 mHz Oppervlaktewater cm",
+"BemonsteringsApparaat":{"Code":"NVT","Omschrijving":
+"Waarde is niet van toepassing"},
+"BemonsteringsMethode":{"Code":"NVT","Omschrijving":
+"Waarde is niet van toepassing"},
+"BemonsteringsSoort":{"Code":"01","Omschrijving":"Rechtstreekse meting"},
+"BioTaxon":{"Code":"NVT","Omschrijving":"NVT"},
+"BioTaxon_Compartiment":{"Code":"NVT","Omschrijving":"NVT"},
+"Compartiment":{"Code":"OW","Omschrijving":"Oppervlaktewater"},
+"Eenheid":{"Code":"cm","Omschrijving":"centimeter"},
+"Grootheid":{"Code":"Hm0","Omschrijving":"Significantegolfhoogte uit energiespectrum van 30-500 mHz"},
+"Hoedanigheid":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"MeetApparaat":{"Code":"108","Omschrijving":"Golfmeetboei"},
+"MonsterBewerkingsMethode":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"Orgaan":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"Parameter":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"PlaatsBepalingsApparaat":{"Code":"NVT","Omschrijving":
+"Waarde is niet van toepassing"},
+"Typering":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"},
+"WaardeBepalingstechniek":{"Code":"NVT","Omschrijving
+":"Waarde is niet van toepassing"},
+"WaardeBepalingsmethode":{"Code":"other:F046","Omschrijving":"Freq/tijd analyse energie en richtingen, methode CIC/GLFPAR"},
+"WaardeBewerkingsmethode":{"Code":"NVT","Omschrijving":"Waarde is niet van toepassing"}},
+"Locatie":{"Locatie_MessageID":78411364,"Coordinatenstelsel":"25831","X":518882.333320247,"Y":5760829.11729589,"Naam":"Euro platform","Code":"EURPFM"},
+"AantalMetingenPerPeriodeLijst":[{"Groeperingsperiode":{"Jaarnummer":2012,"Week":3},"AantalMetingen":21}]
+},
 ```
 
 The following is an example request for retrieving the number of observations about a certain one
-period that met the specified aquometadata, locations (locations) and perception metadata, grouped
-over a certain grouping period. NB: this web service is not used yet and there are
-performance problems known.
+period that met the specified Aquometadata, Locaties and Waarnemingen parameters, grouped
+over a certain grouping period.
+
+<aside class="notice">
+This web service is not used yet and  performance issues are known.
+</aside>
+
 
 Methode | Content-Type | URL
 --------- | ----------- | -----------
@@ -292,5 +300,9 @@ Attribute | Value | Description
 | Compartimenten |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Compartimenten that can be used in the webservices |
 | Eenheden |  <a href='/?python#tutorial-values'>make your own list using Tutorial Values </a>  | This list Eenheden that can be used in the webservices |
 Periode | 0000-00-00T00:00:00.000+01:00 | Time in the format 
-LocatieLijst | Vul dit later aan | vul dit later aan
+LocatieLijst | <a href='/?python#tutorial-locations'>List using Tutorial locations </a>  | This will show the locations with and without data.
+
+<aside class="notice">
+with the Attribute LocatieLijst it's possible to give multiple locations within 1 request.
+</aside>
 

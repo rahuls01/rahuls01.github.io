@@ -15,15 +15,31 @@
 
 
 
-The following tutorial will show multiple lists. Within the these lists you will see the following Parameter.
+The following tutorial will show multiple lists. Within the these lists you will see the following parameters.
 
-Parameter | Value | Description
---------- | ------- | -----------
-Eenheden | true/false | This will show the Eenheden.
-Grootheden | true/false  | This will show the Grootheden.
-Hoedanigheden | true/false  | This will show the Hoedanigheden.
-Compartimenten | true/false | This will show the Compartimenten.
-Parameters | true/false | This will show the Parameters.
+Sheets | Description | Value |
+--------- | ------| -----|
+| Grootheden | This list Grootheden that can be used in the webservices | True/False
+| Parameters | This list Parameters that can be used in the webservices | True/False
+| Compartimenten | This list Compartimenten that can be used in the webservices | True/False
+| Hoedanigheden | This list Hoedanigheden that can be used in the webservices | True/False
+| Eenheden | This list Eenheden that can be used in the webservices | True/False
+| BemonsteringsApparaten | This list BemonsteringsApparaten that can be used in the webservices | True/False
+| BemonsteringsMethoden | This list BemonsteringsMethoden that can be used in the webservices | True/False
+| BemonsteringsSoorten | This list BemonsteringsSoorten that can be used in the webservices | True/False
+| BioTaxon | This list BioTaxon that can be used in the webservices | True/False
+| BioTaxon_Compartimenten | This list BioTaxon_Compartimenten that can be used in the webservices | True/False
+| MeetApparaten | This list MeetApparaten that can be used in the webservices | True/False
+| MonsterBewerkingsMethoden | This list MonsterBewerkingsMethoden that can be used in the webservices | True/False
+| Organen | This list Organen that can be used in the webservices | True/False
+| PlaatsBepalingsApparaten | This list PlaatsBepalingsApparaten that can be used in the webservices | True/False
+| Typeringen | This list Typeringen that can be used in the webservices | True/False
+| WaardeBepalingstechnieken | This list WaardeBepalingstechnieken that can be used in the webservices | True/False
+| WaardeBepalingsmethoden | This list WaardeBepalingsmethoden that can be used in the webservices | True/False
+| WaardeBewerkingsmethoden | This list WaardeBewerkingsmethoden that can be used in the webservices | True/False
+
+
+
 
 ## Imports
 
@@ -90,7 +106,7 @@ request = {
 // Nothing to show check Python
 ```
 
-This code is the request that you send to the webservice
+This code is the request that is needed to send to the webservice.
 
 ## Response 
 
@@ -192,7 +208,7 @@ writer.save()
 ```shell
 // Nothing to show check Python
 ```
-The following code will take the response and split all the values into 18 different Sheets 
+The following code will take the response and split all the values into 18 different Sheets: 
 
 Sheets | Description
 --------- | ------| 
